@@ -6,6 +6,10 @@ D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMem
 D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.MyLogin.resources
 D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Properties.Resources.resources
 D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.GenerateResource.cache
-D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.CoreCompileInputs.cache
 D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.exe
 D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.pdb
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\System.Data.SqlClient.dll
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\System.Data.SqlClient.xml
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.KhoHang_form.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.MainWindow.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.CopyComplete

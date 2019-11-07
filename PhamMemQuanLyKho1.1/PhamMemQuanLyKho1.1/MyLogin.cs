@@ -20,13 +20,13 @@ namespace PhamMemQuanLyKho1._1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=ALVIND-MARTIN-P\SQLEXPRESS;Initial Catalog=QuanLyNhaTro;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=ALVIND-MARTIN-P\SQLEXPRESS;Initial Catalog=QuanLyKho;Integrated Security=True");
             try
             {
                 conn.Open();
                 string tk = textAcc.Text;
                 string pass = textPass.Text;
-                string sql = "select *from LoginProgram where TaiKhoan='" + tk + "'and MatKhau='" + pass + "'";
+                string sql = "select * from account where taikhoan='" + tk + "'and matkhau='" + pass + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader data = cmd.ExecuteReader();
                 if (data.Read() == true)

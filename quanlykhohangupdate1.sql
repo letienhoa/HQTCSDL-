@@ -20,6 +20,7 @@ create table account
      matkhau varchar(8) not null,
      constraint pk_idtk primary key(idtk)
 	);
+Go
 
 --------------------------------
 --Nhóm hàng hóa
@@ -106,6 +107,7 @@ constraint ck_phieunhap unique (mathukho,mancc,mahang)
 	);
 
 
+	
 	--Phiếu xuất
 	create table phieuxuat
 	(
@@ -245,18 +247,74 @@ go
 -----------------------------------------
 
 -- tạo proc ,funtion,trigger
-drop Function laymk;
 
-Create function  laymk(@tendangnhap varchar(8))
+-- kiem tra mk;
+Create function laymk(@tendangnhap varchar(8))
        Returns varchar(8)
   Begin
-         declare @matkhau varchar(8);
-         
-          set @matkhau=(Select matkhau from account
+         return(Select matkhau from account
            Where account.taikhoan=@tendangnhap);
-		 return @matkhau;
 End;
+go
+--test
+exec dbo.laymk 'Hoadt';
+ go
 
-    declare @matkhau1 varchar(8);
-set @matkhau1=dbo.laymk('Hoadt');
-print @matkhau1;
+ -- kiểm tra trước khi thêm tài khoản
+create proc kiemtrataikhoan(@taikhoan varchar(8))
+ as
+ select * from account where taikhoan=@taikhoan
+go
+
+exec kiemtrataikhoan('Hoadt');
+go
+-- neu  có giá trị thì them ko dc ,tài khoản đã tồn tại ,còn ko , thì insert
+
+--
+create proc themtaikhoan(@idtk int,@taikhoan varchar(8),@matkhau varchar(8))
+ as
+ insert into account values(@idtk,@taikhoan,@matkhau)
+ go
+
+-- lấy thông tin thừ phiếu nhập
+ create proc  infophieunhap
+  as
+  select *from phieunhap
+go
+
+--test
+exec infophieunhap;
+go
+--kiểm tra phiếu nhập
+create proc kiemtraphieunhap(@maphieunhap varchar(8))
+	as
+	select *from phieunhap where maphieunhap=@maphieunhap
+	go
+	-- lập phiếu nhập
+	create proc themphieunhap(@maphieunhap varchar(8),@ngaynhap date,@mathukho varchar(8),@macc varchar(8),
+	@soluong int,@mahang varchar(8))
+	as
+	insert into phieunhap values(@maphieunhap,@ngaynhap,@mathukho,@macc,@soluong,@mahang)
+	go
+
+-- lấy thông tin từ phiếu xuất
+create proc  infophieuxuat
+  as
+  select *from phieuxuat
+go
+
+--test
+exec infophieuxuat;
+go
+-- kiểm tra phiếu xuất
+create proc kiemtraphieuxuat(@maphieuxuat varchar(8))
+	as
+	select *from phieuxuat where maphieuxuat=@maphieuxuat
+	go
+	-- thêm phiếu xuất 
+create proc themphieuxuat(@maphieuxuat varchar(8),@ngayxuat date,@mathukho varchar(8),@mahang varchar(8),
+	@soluong int,@makhachhang varchar(8))
+	as
+	insert into phieuxuat values(@maphieuxuat,@ngayxuat,@mathukho,@mahang,@soluong,@makhachhang)
+	go
+
