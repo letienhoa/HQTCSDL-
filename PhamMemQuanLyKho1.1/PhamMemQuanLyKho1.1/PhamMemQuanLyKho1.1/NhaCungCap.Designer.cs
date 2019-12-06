@@ -277,7 +277,7 @@
             this.btn_exitncc.TabIndex = 7;
             this.btn_exitncc.Text = "Thoát";
             this.btn_exitncc.UseVisualStyleBackColor = false;
-            this.btn_exitncc.Click += new System.EventHandler(this.btn_exitncc_Click_1);
+            this.btn_exitncc.Click += new System.EventHandler(this.btn_exitncc_Click);
             // 
             // btn_deletencc
             // 
@@ -293,6 +293,7 @@
             this.btn_deletencc.TabIndex = 6;
             this.btn_deletencc.Text = "Xóa";
             this.btn_deletencc.UseVisualStyleBackColor = false;
+            this.btn_deletencc.Click += new System.EventHandler(this.btn_deletencc_Click);
             // 
             // btn_clearncc
             // 
@@ -308,6 +309,7 @@
             this.btn_clearncc.TabIndex = 3;
             this.btn_clearncc.Text = "Làm mới";
             this.btn_clearncc.UseVisualStyleBackColor = false;
+            this.btn_clearncc.Click += new System.EventHandler(this.btn_clearncc_Click);
             // 
             // btn_fixncc
             // 
@@ -323,6 +325,7 @@
             this.btn_fixncc.TabIndex = 5;
             this.btn_fixncc.Text = "Sửa ";
             this.btn_fixncc.UseVisualStyleBackColor = false;
+            this.btn_fixncc.Click += new System.EventHandler(this.btn_fixncc_Click);
             // 
             // btn_addncc
             // 
@@ -338,6 +341,7 @@
             this.btn_addncc.TabIndex = 4;
             this.btn_addncc.Text = "Thêm";
             this.btn_addncc.UseVisualStyleBackColor = false;
+            this.btn_addncc.Click += new System.EventHandler(this.btn_addncc_Click);
             // 
             // panel6
             // 

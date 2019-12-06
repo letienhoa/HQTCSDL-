@@ -713,7 +713,7 @@ go
 --lays thong tin
 create proc thongtinsach
 as
-	select * from  loaisach
+	select * from  sach
 go
 
 --kiem tra truoc khi them
@@ -755,10 +755,11 @@ create proc themsach
 	@idsach nvarchar(8),
 	@tensach nvarchar(20),
 	@loaisach nvarchar(8),
-	@soluong int,
 	@make nvarchar(8)
 as
 	begin
+	declare @soluong int
+	set @soluong= 0;
 		begin try
 			begin tran
 				insert into sach

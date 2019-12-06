@@ -39,6 +39,8 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSach
@@ -145,11 +147,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Navy;
-            this.button1.Location = new System.Drawing.Point(208, 218);
+            this.button1.Location = new System.Drawing.Point(415, 218);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 65);
             this.button1.TabIndex = 6;
-            this.button1.Text = "Thủ Kho";
+            this.button1.Text = "Nhân Viên";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -161,7 +163,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.Navy;
-            this.button7.Location = new System.Drawing.Point(347, 218);
+            this.button7.Location = new System.Drawing.Point(150, 217);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(96, 65);
             this.button7.TabIndex = 7;
@@ -177,7 +179,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.Navy;
-            this.button8.Location = new System.Drawing.Point(483, 218);
+            this.button8.Location = new System.Drawing.Point(280, 217);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(99, 65);
             this.button8.TabIndex = 8;
@@ -197,6 +199,31 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Quản Lý Kho Sách";
             // 
+            // button9
+            // 
+            this.button9.BackgroundImage = global::PhamMemQuanLyKho1._1.Properties.Resources.anh;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(649, 359);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(99, 42);
+            this.button9.TabIndex = 10;
+            this.button9.Text = "Thoát";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.BackgroundImage = global::PhamMemQuanLyKho1._1.Properties.Resources.anh;
+            this.button10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.Navy;
+            this.button10.Location = new System.Drawing.Point(550, 218);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(95, 65);
+            this.button10.TabIndex = 11;
+            this.button10.Text = "ACOUNT";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +231,8 @@
             this.BackgroundImage = global::PhamMemQuanLyKho1._1.Properties.Resources.nenchu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -235,5 +264,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }

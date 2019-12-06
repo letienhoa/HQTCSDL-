@@ -86,5 +86,10 @@ namespace PhamMemQuanLyKho1._1
             txb_soluong.Text = dtgv_phieunhap.Rows[r].Cells[4].Value.ToString();
             txb_mancc.Text = dtgv_phieunhap.Rows[r].Cells[5].Value.ToString();
         }
+
+        private void PhieuNhap_Load(object sender, EventArgs e)
+        {
+            loaddulieu();
+        }
     }
 }

@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acount.Designer.cs">
+      <DependentUpon>Acount.cs</DependentUpon>
+    </Compile>
     <Compile Include="connect.cs" />
     <Compile Include="DataClass.designer.cs">
       <AutoGen>True</AutoGen>
@@ -130,6 +136,9 @@
     <Compile Include="NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Acount.resx">
+      <DependentUpon>Acount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BoPhanNhanVien.resx">
       <DependentUpon>BoPhanNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhaCungCap.resx">
       <DependentUpon>NhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhieuNhap.resx">
       <DependentUpon>PhieuNhap.cs</DependentUpon>

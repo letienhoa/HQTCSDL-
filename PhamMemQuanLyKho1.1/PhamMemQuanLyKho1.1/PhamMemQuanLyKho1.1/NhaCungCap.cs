@@ -114,14 +114,12 @@ namespace PhamMemQuanLyKho1._1
             dtgv_nhacungcap.DataSource = dt;
         }
 
-        private void btn_exitncc_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }

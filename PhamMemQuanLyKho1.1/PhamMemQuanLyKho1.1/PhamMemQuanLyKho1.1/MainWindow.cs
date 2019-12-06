@@ -31,26 +31,24 @@ namespace PhamMemQuanLyKho1._1
 
         private void btnKho_Click(object sender, EventArgs e)
         {
-           
+            Form sach = new Sach();
+            sach.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-          
             Form khachhang = new KhachHang();
             khachhang.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-          
             Form nhacungcap = new NhaCungCap();
             nhacungcap.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-          
             Form ke = new Ke();
             ke.ShowDialog();
         }
@@ -63,7 +61,6 @@ namespace PhamMemQuanLyKho1._1
 
         private void button6_Click(object sender, EventArgs e)
         {
-     
             Form bophannv = new BoPhanNhanVien();
             bophannv.ShowDialog();
         }
@@ -82,7 +79,17 @@ namespace PhamMemQuanLyKho1._1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form nv = new NhanVien();
+            nv.ShowDialog();
+        }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Bạn muốn thoát thật chứ ?", "Thoát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(dialog==DialogResult.OK)
+            {
+                this.Close();
+            }
         }
     }
 }

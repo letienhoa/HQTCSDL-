@@ -442,6 +442,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PhieuNhap";
             this.Text = "Phiếu nhập - Phần mềm quản lý kho";
+            this.Load += new System.EventHandler(this.PhieuNhap_Load);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel6.ResumeLayout(false);

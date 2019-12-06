@@ -47,10 +47,10 @@
             // txb_ten
             // 
             this.txb_ten.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_ten.Location = new System.Drawing.Point(18, 292);
-            this.txb_ten.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txb_ten.Location = new System.Drawing.Point(14, 192);
+            this.txb_ten.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txb_ten.Name = "txb_ten";
-            this.txb_ten.Size = new System.Drawing.Size(151, 30);
+            this.txb_ten.Size = new System.Drawing.Size(114, 26);
             this.txb_ten.TabIndex = 21;
             // 
             // label3
@@ -59,9 +59,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(18, 259);
+            this.label3.Location = new System.Drawing.Point(14, 165);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 24);
+            this.label3.Size = new System.Drawing.Size(101, 19);
             this.label3.TabIndex = 20;
             this.label3.Text = "Tên thể loại : ";
             // 
@@ -71,21 +72,22 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(291, 145);
+            this.label1.Location = new System.Drawing.Point(218, 73);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 29);
+            this.label1.Size = new System.Drawing.Size(158, 23);
             this.label1.TabIndex = 15;
             this.label1.Text = "Danh sách thể loại ";
             // 
             // dtgv_loaisach
             // 
             this.dtgv_loaisach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_loaisach.Location = new System.Drawing.Point(287, 188);
-            this.dtgv_loaisach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgv_loaisach.Location = new System.Drawing.Point(215, 108);
+            this.dtgv_loaisach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtgv_loaisach.Name = "dtgv_loaisach";
             this.dtgv_loaisach.RowHeadersWidth = 51;
             this.dtgv_loaisach.RowTemplate.Height = 24;
-            this.dtgv_loaisach.Size = new System.Drawing.Size(254, 355);
+            this.dtgv_loaisach.Size = new System.Drawing.Size(190, 235);
             this.dtgv_loaisach.TabIndex = 13;
             this.dtgv_loaisach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_loaisach_CellClick);
             // 
@@ -95,9 +97,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label5.Location = new System.Drawing.Point(169, 18);
+            this.label5.Location = new System.Drawing.Point(127, 15);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(205, 37);
+            this.label5.Size = new System.Drawing.Size(163, 29);
             this.label5.TabIndex = 11;
             this.label5.Text = "THỂ LOẠI SÁCH";
             // 
@@ -108,10 +111,10 @@
             this.btn_exitncc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_exitncc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exitncc.ForeColor = System.Drawing.Color.Navy;
-            this.btn_exitncc.Location = new System.Drawing.Point(429, 78);
-            this.btn_exitncc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_exitncc.Location = new System.Drawing.Point(322, 373);
+            this.btn_exitncc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_exitncc.Name = "btn_exitncc";
-            this.btn_exitncc.Size = new System.Drawing.Size(112, 48);
+            this.btn_exitncc.Size = new System.Drawing.Size(84, 39);
             this.btn_exitncc.TabIndex = 18;
             this.btn_exitncc.Text = "Thoát";
             this.btn_exitncc.UseVisualStyleBackColor = false;
@@ -124,10 +127,10 @@
             this.btn_deletencc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_deletencc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_deletencc.ForeColor = System.Drawing.Color.Navy;
-            this.btn_deletencc.Location = new System.Drawing.Point(287, 78);
-            this.btn_deletencc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_deletencc.Location = new System.Drawing.Point(215, 373);
+            this.btn_deletencc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_deletencc.Name = "btn_deletencc";
-            this.btn_deletencc.Size = new System.Drawing.Size(112, 48);
+            this.btn_deletencc.Size = new System.Drawing.Size(84, 39);
             this.btn_deletencc.TabIndex = 16;
             this.btn_deletencc.Text = "Xóa";
             this.btn_deletencc.UseVisualStyleBackColor = false;
@@ -140,10 +143,10 @@
             this.btn_clearncc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_clearncc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clearncc.ForeColor = System.Drawing.Color.Navy;
-            this.btn_clearncc.Location = new System.Drawing.Point(18, 78);
-            this.btn_clearncc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_clearncc.Location = new System.Drawing.Point(14, 373);
+            this.btn_clearncc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_clearncc.Name = "btn_clearncc";
-            this.btn_clearncc.Size = new System.Drawing.Size(112, 48);
+            this.btn_clearncc.Size = new System.Drawing.Size(84, 39);
             this.btn_clearncc.TabIndex = 10;
             this.btn_clearncc.Text = "Làm mới";
             this.btn_clearncc.UseVisualStyleBackColor = false;
@@ -156,10 +159,10 @@
             this.btn_addncc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_addncc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addncc.ForeColor = System.Drawing.Color.Navy;
-            this.btn_addncc.Location = new System.Drawing.Point(154, 78);
-            this.btn_addncc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_addncc.Location = new System.Drawing.Point(116, 373);
+            this.btn_addncc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_addncc.Name = "btn_addncc";
-            this.btn_addncc.Size = new System.Drawing.Size(112, 48);
+            this.btn_addncc.Size = new System.Drawing.Size(84, 39);
             this.btn_addncc.TabIndex = 12;
             this.btn_addncc.Text = "Thêm";
             this.btn_addncc.UseVisualStyleBackColor = false;
@@ -168,10 +171,10 @@
             // txb_searchid
             // 
             this.txb_searchid.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_searchid.Location = new System.Drawing.Point(142, 188);
-            this.txb_searchid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txb_searchid.Location = new System.Drawing.Point(106, 108);
+            this.txb_searchid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txb_searchid.Name = "txb_searchid";
-            this.txb_searchid.Size = new System.Drawing.Size(61, 27);
+            this.txb_searchid.Size = new System.Drawing.Size(47, 23);
             this.txb_searchid.TabIndex = 23;
             // 
             // label7
@@ -180,9 +183,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(19, 190);
+            this.label7.Location = new System.Drawing.Point(14, 109);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 23);
+            this.label7.Size = new System.Drawing.Size(91, 18);
             this.label7.TabIndex = 22;
             this.label7.Text = "Tìm kiếm:   ID";
             // 
@@ -192,20 +196,19 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(211, 179);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(158, 100);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 49);
+            this.button1.Size = new System.Drawing.Size(41, 40);
             this.button1.TabIndex = 24;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // LoaiSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PhamMemQuanLyKho1._1.Properties.Resources.awesome_collection_of_simple_background_on_hd_wallpapers_elegant_formal_powerpoint_background_designs_640x480;
-            this.ClientSize = new System.Drawing.Size(561, 554);
+            this.ClientSize = new System.Drawing.Size(421, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txb_searchid);
             this.Controls.Add(this.label7);
@@ -218,7 +221,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgv_loaisach);
             this.Controls.Add(this.label5);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoaiSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Các loại sách - phần mềm quản lý kho";
