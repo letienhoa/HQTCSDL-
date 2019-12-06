@@ -315,6 +315,13 @@ create function laymk(@tendangnhap varchar(8))
 	End;
 go
 
+--xác nhận loại mật khẩu
+create proc laymk2 @tendangnhap varchar(8),@matkhau varchar(8), @type int
+as 
+	select * from account where taikhoan=@tendangnhap and matkhau=@matkhau and type = @type
+go
+
+
 
 create proc laymk1 @tendangnhap varchar(8),@matkhau varchar(8)
 as 
