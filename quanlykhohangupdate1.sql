@@ -727,7 +727,6 @@ create proc suasach
     @idsach varchar(8),
 	@tensach nvarchar(20),
 	@loaisach nvarchar(8),
-	@soluong int,
 	@make nvarchar(8)
 as
 	begin
