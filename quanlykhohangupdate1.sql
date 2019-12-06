@@ -351,6 +351,11 @@ as
 go
 
 
+create proc thongtinphieunhapid @idsach varchar(8)
+as
+	select * from  phieunhap where maphieunhap=@idsach
+go
+
 --exec infophieunhap; -----test
 go
 
@@ -395,6 +400,11 @@ create proc suaphieunhap(@maphieunhap varchar(8),@ngaynhap date,@mathukho varcha
 create proc  infophieuxuat
 as
 	select *from phieuxuat
+go
+
+create proc thongtinphieuxuatid @idsach varchar(8)
+as
+	select * from  phieuxuat where maphieuxuat=@idsach
 go
 
 
@@ -501,6 +511,11 @@ as
 	select * from  nhacungcap
 go
 
+create proc thongtinnhacungcapid @idsach varchar(8)
+as
+	select * from  nhacungcap where mancc=@idsach
+go
+
 --kiem tra truoc khi them vao
 create proc kiemtrancc(@mancc varchar(8))
 as
@@ -542,6 +557,11 @@ go
 create proc thongtinke
 as
 	select * from  ke
+go
+
+create proc thongtinkeid @idsach varchar(8)
+as
+	select * from  ke where make=@idsach
 go
 
 --kiem tra truoc khi them vao
@@ -588,6 +608,11 @@ as
 	select * from  khachhang
 go
 
+create proc thongtinkhachhangid @idkh varchar(8)
+as
+	select * from  khachhang where makhachhang=@idkh
+go
+
 --kiem tra truoc khi them vao
 create proc kiemtrakhachhang(@makhachhang varchar(8))
 as
@@ -631,6 +656,10 @@ as
 	select * from  bophannv
 go
 
+create proc thongtinbophanid @idbophan varchar(8)
+as
+	select * from  bophannv where mabophan=@idbophan
+go
 --kiem tra truoc khi them vao
 create proc kiembophan(@mabophan varchar(8))
 as
@@ -673,6 +702,10 @@ as
 	select * from  loaisach
 go
 
+create proc thongtinloaisachid @idsach varchar(8)
+as
+	select * from  loaisach where tenloaisach=@idsach
+go
 --kiem tra truoc khi them vao
  create proc kiemnhomhang(@tennhomhang varchar(8))
 as
@@ -716,6 +749,11 @@ as
 	select * from  sach
 go
 
+--lay theo id
+create proc thongtinsachid @idsach varchar(8)
+as
+	select * from  sach where masach=@idsach
+go
 --kiem tra truoc khi them
 create proc kiemtrasach(@idsach varchar(8))
 as
@@ -757,12 +795,13 @@ create proc themsach
 	@make nvarchar(8)
 as
 	begin
-	declare @soluong int
-	set @soluong= 0;
+	
 		begin try
 			begin tran
+			declare @soluong int
+			  set @soluong =0
 				insert into sach
-				values(	@tensach,@idsach,
+				values(@idsach,	@tensach,
 						@loaisach,@soluong,
 						@make)
 			commit tran
@@ -773,4 +812,7 @@ as
 			print 'lỗi rồi';
 		end catch
 	end
+go
+
+exec dbo.themsach N'S0007',N'Huong Dan nau an',N'GiaDinh',N'KE003'
 go
