@@ -114,6 +114,16 @@ namespace PhamMemQuanLyKho1._1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backgroundSach1 {
+            get {
+                object obj = ResourceManager.GetObject("backgroundSach1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BRbutton {
             get {
                 object obj = ResourceManager.GetObject("BRbutton", resourceCulture);
@@ -137,6 +147,16 @@ namespace PhamMemQuanLyKho1._1.Properties {
         internal static System.Drawing.Bitmap imagesSearch {
             get {
                 object obj = ResourceManager.GetObject("imagesSearch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagesSearch1 {
+            get {
+                object obj = ResourceManager.GetObject("imagesSearch1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

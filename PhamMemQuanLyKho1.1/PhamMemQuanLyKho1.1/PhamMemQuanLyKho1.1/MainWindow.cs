@@ -70,12 +70,14 @@ namespace PhamMemQuanLyKho1._1
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            Form px = new PhieuNhap();
+            px.ShowDialog();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            Form px = new PhieuXuat();
+            px.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)

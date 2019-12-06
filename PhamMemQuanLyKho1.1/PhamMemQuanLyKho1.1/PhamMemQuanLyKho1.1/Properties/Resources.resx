@@ -130,11 +130,14 @@
   <data name="anhbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\anhbutton.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="backgroundSach" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundSach.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imagesSearch1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imagesSearch1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="awesome-collection-of-simple-background-on-hd-wallpapers-elegant-formal-powerpoint-background-designs-640x480" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\awesome-collection-of-simple-background-on-hd-wallpapers-elegant-formal-powerpoint-background-designs-640x480.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,10 +145,13 @@
   <data name="nenchu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nenchu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="nen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="anh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\anh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backgroundSach" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backgroundSach.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backgroundSach1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundSach1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

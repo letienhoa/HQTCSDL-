@@ -108,5 +108,10 @@ namespace PhamMemQuanLyKho1._1
             DataTable dt = connect.getDataTable(kiemtra);
             dtgv_ke.DataSource = dt;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

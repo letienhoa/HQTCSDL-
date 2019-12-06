@@ -124,11 +124,11 @@
     <Compile Include="Sach.Designer.cs">
       <DependentUpon>Sach.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThuKho.cs">
+    <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThuKho.Designer.cs">
-      <DependentUpon>ThuKho.cs</DependentUpon>
+    <Compile Include="NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BoPhanNhanVien.resx">
       <DependentUpon>BoPhanNhanVien.cs</DependentUpon>
@@ -235,6 +235,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backgroundSach.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagesSearch1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundSach1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

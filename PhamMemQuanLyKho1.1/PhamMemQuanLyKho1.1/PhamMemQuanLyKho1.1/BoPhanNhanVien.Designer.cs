@@ -234,13 +234,13 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::PhamMemQuanLyKho1._1.Properties.Resources.images;
+            this.button1.BackgroundImage = global::PhamMemQuanLyKho1._1.Properties.Resources.imagesSearch1;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(157, 193);
+            this.button1.Location = new System.Drawing.Point(157, 205);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(41, 44);
+            this.button1.Size = new System.Drawing.Size(41, 32);
             this.button1.TabIndex = 25;
             this.button1.UseVisualStyleBackColor = true;
             // 

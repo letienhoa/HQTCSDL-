@@ -1,6 +1,6 @@
 ﻿namespace PhamMemQuanLyKho1._1
 {
-    partial class ThuKho
+    partial class NhanVien
     {
         /// <summary>
         /// Required designer variable.
