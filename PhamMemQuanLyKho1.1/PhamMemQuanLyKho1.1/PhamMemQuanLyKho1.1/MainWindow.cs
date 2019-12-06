@@ -12,84 +12,112 @@ namespace PhamMemQuanLyKho1._1
 {
     public partial class MainWindow : Form
     {
-        void loadDATA()
-        {
-
-                btnSach.Enabled = true;
-                //btn2.Enabled = true;
-                //btn3.Enabled = true;
-                //btn4.Enabled = true;
-                //btn5.Enabled = true;
-                //btn6.Enabled = true;
-
-        }
         public MainWindow()
         {
             InitializeComponent();
             loadDATA();
         }
-
-        private void btnKho_Click(object sender, EventArgs e)
+        public static bool ilogin = false;
+        void loadDATA()
         {
-            Form sach = new Sach();
-            sach.ShowDialog();
+
+            if (ilogin == true)
+            {
+                btnLogin.Enabled = false;
+                btnSach.Enabled = true;
+                btnLoaiSach.Enabled = true;
+                btnKeSach.Enabled = true;
+                btnNCC.Enabled = true;
+                btnNV.Enabled = true;
+                btnKH.Enabled = true;
+                btnBPNV.Enabled = true;
+                btnPN.Enabled = true;
+                btnPX.Enabled = true;
+            }
+            else
+            {
+                btnLogin.Enabled = true;
+                btnSach.Enabled = false;
+                btnLoaiSach.Enabled = false;
+                btnKeSach.Enabled = false;
+                btnNCC.Enabled = false;
+                btnNV.Enabled = false;
+                btnKH.Enabled = false;
+                btnBPNV.Enabled = false;
+                btnPN.Enabled = false;
+                btnPX.Enabled = false;
+            }
+
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            Form khachhang = new KhachHang();
-            khachhang.ShowDialog();
+            MyLogin lg = new MyLogin();
+            lg.ShowDialog();
+            loadDATA();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Form nhacungcap = new NhaCungCap();
-            nhacungcap.ShowDialog();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnKeSach_Click(object sender, EventArgs e)
         {
             Form ke = new Ke();
             ke.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnLoaiSach_Click(object sender, EventArgs e)
         {
             Form ls = new LoaiSach();
             ls.ShowDialog();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnNCC_Click(object sender, EventArgs e)
         {
-            Form bophannv = new BoPhanNhanVien();
-            bophannv.ShowDialog();
+            Form nhacungcap = new NhaCungCap();
+            nhacungcap.ShowDialog();
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Form px = new PhieuNhap();
-            px.ShowDialog();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Form px = new PhieuXuat();
-            px.ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnNV_Click(object sender, EventArgs e)
         {
             Form nv = new NhanVien();
             nv.ShowDialog();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void btnKH_Click(object sender, EventArgs e)
+        {
+            Form khachhang = new KhachHang();
+            khachhang.ShowDialog();
+        }
+
+        private void btnBPNV_Click(object sender, EventArgs e)
+        {
+            Form bophannv = new BoPhanNhanVien();
+            bophannv.ShowDialog();
+        }
+
+        private void btnPX_Click(object sender, EventArgs e)
+        {
+            Form px = new PhieuXuat();
+            px.ShowDialog();
+        }
+
+        private void btnPN_Click(object sender, EventArgs e)
+        {
+            Form px = new PhieuNhap();
+            px.ShowDialog();
+        }
+
+        private void btnexit_Click(object sender, EventArgs e)
         {
             DialogResult dialog = MessageBox.Show("Bạn muốn thoát thật chứ ?", "Thoát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if(dialog==DialogResult.OK)
+            if (dialog == DialogResult.OK)
             {
                 this.Close();
             }
+        }
+
+        private void btnSach_Click(object sender, EventArgs e)
+        {
+            Form sach = new Sach();
+            sach.ShowDialog();
         }
     }
 }

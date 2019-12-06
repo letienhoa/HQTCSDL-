@@ -56,6 +56,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txb_masach = new System.Windows.Forms.TextBox();
+            this.btnSua = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_sach)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -177,6 +178,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.btnSua);
             this.panel6.Controls.Add(this.btn_exit);
             this.panel6.Controls.Add(this.btn_clear);
             this.panel6.Controls.Add(this.btn_fix);
@@ -193,8 +195,8 @@
             this.btn_exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_exit.BackgroundImage")));
             this.btn_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_exit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exit.ForeColor = System.Drawing.Color.Navy;
-            this.btn_exit.Location = new System.Drawing.Point(12, 206);
+            this.btn_exit.ForeColor = System.Drawing.Color.Red;
+            this.btn_exit.Location = new System.Drawing.Point(12, 285);
             this.btn_exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(122, 39);
@@ -210,7 +212,7 @@
             this.btn_clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_clear.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clear.ForeColor = System.Drawing.Color.Navy;
-            this.btn_clear.Location = new System.Drawing.Point(12, 11);
+            this.btn_clear.Location = new System.Drawing.Point(12, 172);
             this.btn_clear.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(122, 39);
@@ -226,12 +228,12 @@
             this.btn_fix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_fix.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_fix.ForeColor = System.Drawing.Color.Navy;
-            this.btn_fix.Location = new System.Drawing.Point(12, 140);
+            this.btn_fix.Location = new System.Drawing.Point(12, 129);
             this.btn_fix.Margin = new System.Windows.Forms.Padding(2);
             this.btn_fix.Name = "btn_fix";
             this.btn_fix.Size = new System.Drawing.Size(122, 39);
             this.btn_fix.TabIndex = 5;
-            this.btn_fix.Text = "Sửa ";
+            this.btn_fix.Text = "Lưu";
             this.btn_fix.UseVisualStyleBackColor = false;
             this.btn_fix.Click += new System.EventHandler(this.btn_fix_Click);
             // 
@@ -242,7 +244,7 @@
             this.btn_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_add.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.ForeColor = System.Drawing.Color.Navy;
-            this.btn_add.Location = new System.Drawing.Point(12, 75);
+            this.btn_add.Location = new System.Drawing.Point(12, 11);
             this.btn_add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(122, 39);
@@ -256,7 +258,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(139, 25);
+            this.label5.Location = new System.Drawing.Point(167, 23);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 29);
@@ -391,6 +393,22 @@
             this.txb_masach.Size = new System.Drawing.Size(123, 26);
             this.txb_masach.TabIndex = 1;
             // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.Transparent;
+            this.btnSua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSua.BackgroundImage")));
+            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSua.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.Color.Navy;
+            this.btnSua.Location = new System.Drawing.Point(12, 56);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(122, 39);
+            this.btnSua.TabIndex = 8;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
             // Sach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -452,5 +470,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txb_masach;
+        private System.Windows.Forms.Button btnSua;
     }
 }

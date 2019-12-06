@@ -254,5 +254,29 @@
   <ItemGroup>
     <None Include="Resources\backgroundSach1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bangphong.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dangky.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DichVu.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giaphong.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoadon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Khach.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,24 +12,35 @@ namespace PhamMemQuanLyKho1._1
 {
     public partial class Sach : Form
     {
+        int a = 0;
         public Sach()
         {
             InitializeComponent();
+        }
+        public void cl()
+        {
+            this.txb_masach.Clear();
+            this.txb_tensach.Clear();
+            this.txb_loaisach.Clear();
+            this.txb_make.Clear();
+            this.txb_soluong.Clear();
         }
         public void loaddulieu()
         {
             string thongtin = @"exec dbo.thongtinsach";
             DataTable dt = connect.getDataTable(thongtin);
             dtgv_sach.DataSource = dt;
+            txb_masach.Enabled = false;
+            txb_tensach.Enabled = false;
+            txb_loaisach.Enabled = false;
+            txb_make.Enabled = false;
+            txb_soluong.Enabled = false;
+
         }
         private void btn_clear_Click(object sender, EventArgs e)
         {
-            this.txb_masach.Clear();
-            this.txb_tensach.Clear();
-            this.txb_loaisach.Clear();
-            this.txb_make.Clear();
-            this.txb_make.Clear();
-            this.txb_soluong.Clear();
+            cl();
+            loaddulieu();
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -39,39 +50,53 @@ namespace PhamMemQuanLyKho1._1
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            string kiemtrancc = @"exec dbo.kiemtrasach N'" + txb_masach.Text + "'";
-            DataTable dt = connect.getDataTable(kiemtrancc);
-            if (dt.Rows.Count == 0)
-            {
-                string themvao = @"exec dbo.themsach N'" + txb_masach.Text + "',N'" + txb_tensach.Text
-                    + "',N'" + txb_loaisach.Text + "',N'" +txb_make+ "'";
-                connect.executeQuery(themvao);
-                DialogResult dialog = MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loaddulieu();
-            }
-            else
-            {
-                DialogResult dialog = MessageBox.Show("Mã sách cấp đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            a = 1;
+            cl();
+            txb_masach.Enabled = true;
+            txb_tensach.Enabled = true;
+            txb_loaisach.Enabled = true;
+            txb_make.Enabled = true;
+            txb_soluong.Enabled = true;
         }
 
         private void btn_fix_Click(object sender, EventArgs e)
         {
-            string sua = @"exec dbo.suasach N'" + txb_masach.Text + "',N'" + txb_tensach.Text
-                   + "',N'" + txb_loaisach.Text + "',N'" + txb_make.Text + "'";
-            DialogResult dialog = MessageBox.Show("Bạn có chắc là muốn sửa thông tin", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialog == DialogResult.Yes)
+            if (a == 2)
             {
-                try
+                string sua = @"exec dbo.suasach N'" + txb_masach.Text + "',N'" + txb_tensach.Text
+                       + "',N'" + txb_loaisach.Text + "',N'" + txb_make.Text + "'";
+                DialogResult dialog = MessageBox.Show("Bạn có chắc là muốn sửa thông tin", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialog == DialogResult.Yes)
                 {
-                    connect.executeQuery(sua);
-                    loaddulieu();
-                }
-                catch
-                {
-                    MessageBox.Show("Lỗi thực thi !!!");
+                    try
+                    {
+                        connect.executeQuery(sua);
+                        loaddulieu();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Lỗi thực thi !!!");
+                    }
                 }
             }
+            else if (a == 1)
+            {
+                string kiemtrancc = @"exec dbo.kiemtrasach N'" + txb_masach.Text + "'";
+                DataTable dt = connect.getDataTable(kiemtrancc);
+                if (dt.Rows.Count == 0)
+                {
+                    string themvao = @"exec dbo.themsach N'" + txb_masach.Text + "',N'" + txb_tensach.Text
+                        + "',N'" + txb_loaisach.Text + "',N'" + txb_make + "'";
+                    connect.executeQuery(themvao);
+                    DialogResult dialog = MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    loaddulieu();
+                }
+                else
+                {
+                    DialogResult dialog = MessageBox.Show("Mã sách cấp đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            a = 0;
 
         }
 
@@ -88,6 +113,14 @@ namespace PhamMemQuanLyKho1._1
         private void Sach_Load(object sender, EventArgs e)
         {
             loaddulieu();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            a = 2;
+            txb_tensach.Enabled = true;
+            txb_loaisach.Enabled = true;
+            txb_make.Enabled = true;
         }
     }
 }

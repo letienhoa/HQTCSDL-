@@ -20,6 +20,8 @@ namespace PhamMemQuanLyKho1._1
      
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            DataGridView a = new DataGridView();
+
             if (textAcc.Text == "" || textPass.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập tài khoản và mật khẩu", "Thông báo");
@@ -27,14 +29,35 @@ namespace PhamMemQuanLyKho1._1
             }
             string tk =textAcc.Text;
             string mk = textPass.Text;
-            string kiemtra = @"exec dbo.laymk1 N'" + tk + "',N'"+ mk +"'"; 
-            DataTable dt= connect.getDataTable(kiemtra);
-            if (dt.Rows.Count > 0)
+            string b = "";
+            string kiemtra = @"exec dbo.laymk1 N'" + tk + "',N'"+ mk +"'";
+            DataTable dt = connect.getDataTable(kiemtra);
+            if (dt.Rows.Count > 0 )
             {
+
+                string kiemtra2 = @"exec dbo.laymk2 N'" + tk + "',N'" + mk + "',N'" + 1 + "'";
+                DataTable dt2 = connect.getDataTable(kiemtra2);
+
+                if (dt2.Rows.Count > 0)
+                {
+                    b = "1";
+                }
+                else
+                {
+                    b = "0";
+                }
+
                 MessageBox.Show("Xin chào " + textAcc.Text + "! Bạn đã đăng nhập thành công!", "Thông báo");
                 this.Hide();
-                Form MainWindow = new MainWindow();
-                MainWindow.ShowDialog();
+                if(b =="1")
+                {
+                    MainWindow.ilogin = true;
+                }
+                else if (b =="0")
+                {
+                    MainWindow.ilogin = false;
+                }
+                
                 this.Close();
             }
             else

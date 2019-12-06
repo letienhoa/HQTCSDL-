@@ -16,7 +16,7 @@ namespace PhamMemQuanLyKho1._1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MyLogin());
+            Application.Run(new MainWindow());
         }
     }
 }
