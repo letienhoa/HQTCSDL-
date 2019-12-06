@@ -821,5 +821,5 @@ as
 	end
 go
 
-exec dbo.themsach N'S0007',N'Huong Dan nau an',N'GiaDinh',N'KE003'
+exec dbo.themsach N'S0008',N'Huong Dan nau an',N'GiaDinh',N'KE003'
 go

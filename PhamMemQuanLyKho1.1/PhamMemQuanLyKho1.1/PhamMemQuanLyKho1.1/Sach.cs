@@ -86,7 +86,7 @@ namespace PhamMemQuanLyKho1._1
                 if (dt.Rows.Count == 0)
                 {
                     string themvao = @"exec dbo.themsach N'" + txb_masach.Text + "',N'" + txb_tensach.Text
-                        + "',N'" + txb_loaisach.Text + "',N'" + txb_make + "'";
+                        + "',N'" + txb_loaisach.Text + "',N'" + txb_make.Text + "'";
                     connect.executeQuery(themvao);
                     DialogResult dialog = MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loaddulieu();
