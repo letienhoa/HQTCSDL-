@@ -36,7 +36,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.txb_mabophan = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btn_exit = new System.Windows.Forms.Button();
@@ -45,7 +44,6 @@
             this.btn_add = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.txb_giotinh = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txb_ten = new System.Windows.Forms.TextBox();
@@ -56,6 +54,15 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txb_ma = new System.Windows.Forms.TextBox();
+            this.btn_luu = new System.Windows.Forms.Button();
+            this.btn_xoa = new System.Windows.Forms.Button();
+            this.txb_mabophan = new System.Windows.Forms.ComboBox();
+            this.manhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tennhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mabophan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txb_giotinh = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_nhanvien)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -69,15 +76,22 @@
             // 
             // dtgv_nhanvien
             // 
-            this.dtgv_nhanvien.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtgv_nhanvien.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dtgv_nhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_nhanvien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.manhanvien,
+            this.tennhanvien,
+            this.diachi,
+            this.sex,
+            this.mabophan});
             this.dtgv_nhanvien.Location = new System.Drawing.Point(423, 51);
             this.dtgv_nhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.dtgv_nhanvien.Name = "dtgv_nhanvien";
             this.dtgv_nhanvien.RowHeadersWidth = 51;
             this.dtgv_nhanvien.RowTemplate.Height = 24;
-            this.dtgv_nhanvien.Size = new System.Drawing.Size(526, 432);
+            this.dtgv_nhanvien.Size = new System.Drawing.Size(550, 432);
             this.dtgv_nhanvien.TabIndex = 19;
+            this.dtgv_nhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_nhanvien_CellClick);
             // 
             // panel7
             // 
@@ -89,7 +103,7 @@
             this.panel7.Location = new System.Drawing.Point(425, 8);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(527, 35);
+            this.panel7.Size = new System.Drawing.Size(548, 35);
             this.panel7.TabIndex = 20;
             // 
             // button1
@@ -103,6 +117,7 @@
             this.button1.Size = new System.Drawing.Size(27, 31);
             this.button1.TabIndex = 25;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txb_searchid
             // 
@@ -112,6 +127,7 @@
             this.txb_searchid.Name = "txb_searchid";
             this.txb_searchid.Size = new System.Drawing.Size(186, 23);
             this.txb_searchid.TabIndex = 2;
+            this.txb_searchid.TextChanged += new System.EventHandler(this.txb_searchid_TextChanged);
             // 
             // label7
             // 
@@ -153,15 +169,6 @@
             this.panel8.Size = new System.Drawing.Size(241, 50);
             this.panel8.TabIndex = 6;
             // 
-            // txb_mabophan
-            // 
-            this.txb_mabophan.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_mabophan.Location = new System.Drawing.Point(109, 3);
-            this.txb_mabophan.Margin = new System.Windows.Forms.Padding(2);
-            this.txb_mabophan.Name = "txb_mabophan";
-            this.txb_mabophan.Size = new System.Drawing.Size(123, 26);
-            this.txb_mabophan.TabIndex = 4;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -176,6 +183,8 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.btn_xoa);
+            this.panel6.Controls.Add(this.btn_luu);
             this.panel6.Controls.Add(this.btn_exit);
             this.panel6.Controls.Add(this.btn_clear);
             this.panel6.Controls.Add(this.btn_fix);
@@ -191,67 +200,71 @@
             this.btn_exit.BackColor = System.Drawing.Color.Transparent;
             this.btn_exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_exit.BackgroundImage")));
             this.btn_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_exit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exit.ForeColor = System.Drawing.Color.Navy;
-            this.btn_exit.Location = new System.Drawing.Point(12, 206);
+            this.btn_exit.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.ForeColor = System.Drawing.Color.Red;
+            this.btn_exit.Location = new System.Drawing.Point(12, 285);
             this.btn_exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(122, 39);
             this.btn_exit.TabIndex = 7;
             this.btn_exit.Text = "Thoát";
             this.btn_exit.UseVisualStyleBackColor = false;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // btn_clear
             // 
             this.btn_clear.BackColor = System.Drawing.Color.Transparent;
             this.btn_clear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_clear.BackgroundImage")));
             this.btn_clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_clear.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clear.ForeColor = System.Drawing.Color.Navy;
-            this.btn_clear.Location = new System.Drawing.Point(12, 11);
+            this.btn_clear.Location = new System.Drawing.Point(12, 128);
             this.btn_clear.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(122, 39);
             this.btn_clear.TabIndex = 3;
             this.btn_clear.Text = "Làm mới";
             this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_fix
             // 
             this.btn_fix.BackColor = System.Drawing.Color.Transparent;
             this.btn_fix.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_fix.BackgroundImage")));
             this.btn_fix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_fix.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_fix.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_fix.ForeColor = System.Drawing.Color.Navy;
-            this.btn_fix.Location = new System.Drawing.Point(12, 140);
+            this.btn_fix.Location = new System.Drawing.Point(12, 56);
             this.btn_fix.Margin = new System.Windows.Forms.Padding(2);
             this.btn_fix.Name = "btn_fix";
             this.btn_fix.Size = new System.Drawing.Size(122, 39);
             this.btn_fix.TabIndex = 5;
             this.btn_fix.Text = "Sửa ";
             this.btn_fix.UseVisualStyleBackColor = false;
+            this.btn_fix.Click += new System.EventHandler(this.btn_fix_Click);
             // 
             // btn_add
             // 
             this.btn_add.BackColor = System.Drawing.Color.Transparent;
             this.btn_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add.BackgroundImage")));
             this.btn_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_add.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.ForeColor = System.Drawing.Color.Navy;
-            this.btn_add.Location = new System.Drawing.Point(12, 75);
+            this.btn_add.Location = new System.Drawing.Point(12, 11);
             this.btn_add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(122, 39);
             this.btn_add.TabIndex = 4;
             this.btn_add.Text = "Thêm";
             this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(56, 25);
+            this.label5.Location = new System.Drawing.Point(82, 26);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(246, 29);
@@ -268,15 +281,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(241, 50);
             this.panel5.TabIndex = 0;
-            // 
-            // txb_giotinh
-            // 
-            this.txb_giotinh.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_giotinh.Location = new System.Drawing.Point(109, 5);
-            this.txb_giotinh.Margin = new System.Windows.Forms.Padding(2);
-            this.txb_giotinh.Name = "txb_giotinh";
-            this.txb_giotinh.Size = new System.Drawing.Size(123, 26);
-            this.txb_giotinh.TabIndex = 4;
             // 
             // label4
             // 
@@ -386,17 +390,102 @@
             this.txb_ma.Size = new System.Drawing.Size(123, 26);
             this.txb_ma.TabIndex = 1;
             // 
+            // btn_luu
+            // 
+            this.btn_luu.BackColor = System.Drawing.Color.Transparent;
+            this.btn_luu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_luu.BackgroundImage")));
+            this.btn_luu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_luu.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_luu.ForeColor = System.Drawing.Color.Navy;
+            this.btn_luu.Location = new System.Drawing.Point(12, 171);
+            this.btn_luu.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_luu.Name = "btn_luu";
+            this.btn_luu.Size = new System.Drawing.Size(122, 39);
+            this.btn_luu.TabIndex = 8;
+            this.btn_luu.Text = "Lưu";
+            this.btn_luu.UseVisualStyleBackColor = false;
+            this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
+            // 
+            // btn_xoa
+            // 
+            this.btn_xoa.BackColor = System.Drawing.Color.Transparent;
+            this.btn_xoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_xoa.BackgroundImage")));
+            this.btn_xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_xoa.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoa.ForeColor = System.Drawing.Color.Navy;
+            this.btn_xoa.Location = new System.Drawing.Point(12, 242);
+            this.btn_xoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(122, 39);
+            this.btn_xoa.TabIndex = 9;
+            this.btn_xoa.Text = "Xóa";
+            this.btn_xoa.UseVisualStyleBackColor = false;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
+            // 
+            // txb_mabophan
+            // 
+            this.txb_mabophan.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txb_mabophan.FormattingEnabled = true;
+            this.txb_mabophan.Location = new System.Drawing.Point(109, 7);
+            this.txb_mabophan.Name = "txb_mabophan";
+            this.txb_mabophan.Size = new System.Drawing.Size(123, 26);
+            this.txb_mabophan.TabIndex = 4;
+            // 
+            // manhanvien
+            // 
+            this.manhanvien.DataPropertyName = "manhanvien";
+            this.manhanvien.HeaderText = "Mã nhân viên";
+            this.manhanvien.Name = "manhanvien";
+            // 
+            // tennhanvien
+            // 
+            this.tennhanvien.DataPropertyName = "tennhanvien";
+            this.tennhanvien.HeaderText = "Tên nhân viên";
+            this.tennhanvien.Name = "tennhanvien";
+            // 
+            // diachi
+            // 
+            this.diachi.DataPropertyName = "diachi";
+            this.diachi.HeaderText = "Địa chỉ";
+            this.diachi.Name = "diachi";
+            // 
+            // sex
+            // 
+            this.sex.DataPropertyName = "sex";
+            this.sex.HeaderText = "Giới tính";
+            this.sex.Name = "sex";
+            // 
+            // mabophan
+            // 
+            this.mabophan.DataPropertyName = "mabophan";
+            this.mabophan.HeaderText = "Mã bộ phận";
+            this.mabophan.Name = "mabophan";
+            // 
+            // txb_giotinh
+            // 
+            this.txb_giotinh.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txb_giotinh.FormattingEnabled = true;
+            this.txb_giotinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nu"});
+            this.txb_giotinh.Location = new System.Drawing.Point(109, 13);
+            this.txb_giotinh.Name = "txb_giotinh";
+            this.txb_giotinh.Size = new System.Drawing.Size(123, 26);
+            this.txb_giotinh.TabIndex = 5;
+            // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PhamMemQuanLyKho1._1.Properties.Resources.awesome_collection_of_simple_background_on_hd_wallpapers_elegant_formal_powerpoint_background_designs_640x480;
-            this.ClientSize = new System.Drawing.Size(960, 499);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(984, 499);
             this.Controls.Add(this.dtgv_nhanvien);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Name = "NhanVien";
-            this.Text = "ThuKho";
+            this.Text = "Thông tin nhân viên - Phần mềm quản lý kho sách";
+            this.Load += new System.EventHandler(this.NhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_nhanvien)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -426,7 +515,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox txb_mabophan;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btn_exit;
@@ -435,7 +523,6 @@
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox txb_giotinh;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txb_ten;
@@ -446,5 +533,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txb_ma;
+        private System.Windows.Forms.Button btn_luu;
+        private System.Windows.Forms.Button btn_xoa;
+        private System.Windows.Forms.ComboBox txb_mabophan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manhanvien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tennhanvien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mabophan;
+        private System.Windows.Forms.ComboBox txb_giotinh;
     }
 }

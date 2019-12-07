@@ -32,23 +32,20 @@
             this.btn_clearpn = new System.Windows.Forms.Button();
             this.btn_addpn = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.txb_mancc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_exitpn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btn_fixpn = new System.Windows.Forms.Button();
+            this.btn_sua = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dtgv_phieunhap = new System.Windows.Forms.DataGridView();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txb_soluong = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txb_mathukho = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txb_ngaynhap = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txb_mahang = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -60,6 +57,16 @@
             this.txb_maphieunhap = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txb_mathukho = new System.Windows.Forms.ComboBox();
+            this.txb_mahang = new System.Windows.Forms.ComboBox();
+            this.txb_mancc = new System.Windows.Forms.ComboBox();
+            this.btn_luu = new System.Windows.Forms.Button();
+            this.maphieunhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaynhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.masach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mancc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel9.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_phieunhap)).BeginInit();
@@ -77,9 +84,9 @@
             this.btn_clearpn.BackColor = System.Drawing.Color.Transparent;
             this.btn_clearpn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_clearpn.BackgroundImage")));
             this.btn_clearpn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_clearpn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clearpn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clearpn.ForeColor = System.Drawing.Color.Navy;
-            this.btn_clearpn.Location = new System.Drawing.Point(12, 11);
+            this.btn_clearpn.Location = new System.Drawing.Point(12, 136);
             this.btn_clearpn.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clearpn.Name = "btn_clearpn";
             this.btn_clearpn.Size = new System.Drawing.Size(122, 39);
@@ -93,9 +100,9 @@
             this.btn_addpn.BackColor = System.Drawing.Color.Transparent;
             this.btn_addpn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_addpn.BackgroundImage")));
             this.btn_addpn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_addpn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addpn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addpn.ForeColor = System.Drawing.Color.Navy;
-            this.btn_addpn.Location = new System.Drawing.Point(12, 75);
+            this.btn_addpn.Location = new System.Drawing.Point(12, 11);
             this.btn_addpn.Margin = new System.Windows.Forms.Padding(2);
             this.btn_addpn.Name = "btn_addpn";
             this.btn_addpn.Size = new System.Drawing.Size(122, 39);
@@ -115,15 +122,6 @@
             this.panel9.Size = new System.Drawing.Size(241, 78);
             this.panel9.TabIndex = 7;
             // 
-            // txb_mancc
-            // 
-            this.txb_mancc.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_mancc.Location = new System.Drawing.Point(109, 28);
-            this.txb_mancc.Margin = new System.Windows.Forms.Padding(2);
-            this.txb_mancc.Name = "txb_mancc";
-            this.txb_mancc.Size = new System.Drawing.Size(123, 26);
-            this.txb_mancc.TabIndex = 4;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -141,9 +139,9 @@
             this.btn_exitpn.BackColor = System.Drawing.Color.Transparent;
             this.btn_exitpn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_exitpn.BackgroundImage")));
             this.btn_exitpn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_exitpn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exitpn.ForeColor = System.Drawing.Color.Navy;
-            this.btn_exitpn.Location = new System.Drawing.Point(12, 206);
+            this.btn_exitpn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exitpn.ForeColor = System.Drawing.Color.Red;
+            this.btn_exitpn.Location = new System.Drawing.Point(12, 288);
             this.btn_exitpn.Margin = new System.Windows.Forms.Padding(2);
             this.btn_exitpn.Name = "btn_exitpn";
             this.btn_exitpn.Size = new System.Drawing.Size(122, 39);
@@ -154,9 +152,10 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.btn_luu);
             this.panel6.Controls.Add(this.btn_exitpn);
             this.panel6.Controls.Add(this.btn_clearpn);
-            this.panel6.Controls.Add(this.btn_fixpn);
+            this.panel6.Controls.Add(this.btn_sua);
             this.panel6.Controls.Add(this.btn_addpn);
             this.panel6.Location = new System.Drawing.Point(256, 83);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
@@ -164,21 +163,21 @@
             this.panel6.Size = new System.Drawing.Size(151, 338);
             this.panel6.TabIndex = 5;
             // 
-            // btn_fixpn
+            // btn_sua
             // 
-            this.btn_fixpn.BackColor = System.Drawing.Color.Transparent;
-            this.btn_fixpn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_fixpn.BackgroundImage")));
-            this.btn_fixpn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_fixpn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_fixpn.ForeColor = System.Drawing.Color.Navy;
-            this.btn_fixpn.Location = new System.Drawing.Point(12, 140);
-            this.btn_fixpn.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_fixpn.Name = "btn_fixpn";
-            this.btn_fixpn.Size = new System.Drawing.Size(122, 39);
-            this.btn_fixpn.TabIndex = 5;
-            this.btn_fixpn.Text = "Sửa ";
-            this.btn_fixpn.UseVisualStyleBackColor = false;
-            this.btn_fixpn.Click += new System.EventHandler(this.btn_fixpn_Click);
+            this.btn_sua.BackColor = System.Drawing.Color.Transparent;
+            this.btn_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_sua.BackgroundImage")));
+            this.btn_sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_sua.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sua.ForeColor = System.Drawing.Color.Navy;
+            this.btn_sua.Location = new System.Drawing.Point(12, 56);
+            this.btn_sua.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_sua.Name = "btn_sua";
+            this.btn_sua.Size = new System.Drawing.Size(122, 39);
+            this.btn_sua.TabIndex = 5;
+            this.btn_sua.Text = "Sửa ";
+            this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // button1
             // 
@@ -196,12 +195,19 @@
             // 
             this.dtgv_phieunhap.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtgv_phieunhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_phieunhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maphieunhap,
+            this.ngaynhap,
+            this.manhanvien,
+            this.masach,
+            this.soluong,
+            this.mancc});
             this.dtgv_phieunhap.Location = new System.Drawing.Point(421, 50);
             this.dtgv_phieunhap.Margin = new System.Windows.Forms.Padding(2);
             this.dtgv_phieunhap.Name = "dtgv_phieunhap";
             this.dtgv_phieunhap.RowHeadersWidth = 51;
             this.dtgv_phieunhap.RowTemplate.Height = 24;
-            this.dtgv_phieunhap.Size = new System.Drawing.Size(526, 432);
+            this.dtgv_phieunhap.Size = new System.Drawing.Size(725, 432);
             this.dtgv_phieunhap.TabIndex = 13;
             this.dtgv_phieunhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_phieunhap_CellClick);
             // 
@@ -236,15 +242,6 @@
             this.label6.Size = new System.Drawing.Size(94, 23);
             this.label6.TabIndex = 3;
             this.label6.Text = "Số lượng : ";
-            // 
-            // txb_mathukho
-            // 
-            this.txb_mathukho.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_mathukho.Location = new System.Drawing.Point(109, 5);
-            this.txb_mathukho.Margin = new System.Windows.Forms.Padding(2);
-            this.txb_mathukho.Name = "txb_mathukho";
-            this.txb_mathukho.Size = new System.Drawing.Size(123, 26);
-            this.txb_mathukho.TabIndex = 3;
             // 
             // label1
             // 
@@ -302,15 +299,6 @@
             this.label5.Size = new System.Drawing.Size(139, 29);
             this.label5.TabIndex = 2;
             this.label5.Text = "PHIẾU NHẬP";
-            // 
-            // txb_mahang
-            // 
-            this.txb_mahang.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_mahang.Location = new System.Drawing.Point(109, 5);
-            this.txb_mahang.Margin = new System.Windows.Forms.Padding(2);
-            this.txb_mahang.Name = "txb_mahang";
-            this.txb_mahang.Size = new System.Drawing.Size(123, 26);
-            this.txb_mahang.TabIndex = 4;
             // 
             // panel5
             // 
@@ -387,9 +375,9 @@
             this.label3.Location = new System.Drawing.Point(2, 3);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 23);
+            this.label3.Size = new System.Drawing.Size(130, 23);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Mã thủ kho: ";
+            this.label3.Text = "Mã nhân viên : ";
             // 
             // panel2
             // 
@@ -429,13 +417,94 @@
             this.panel1.Size = new System.Drawing.Size(412, 474);
             this.panel1.TabIndex = 12;
             // 
+            // txb_mathukho
+            // 
+            this.txb_mathukho.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txb_mathukho.FormattingEnabled = true;
+            this.txb_mathukho.Location = new System.Drawing.Point(138, 4);
+            this.txb_mathukho.Name = "txb_mathukho";
+            this.txb_mathukho.Size = new System.Drawing.Size(94, 26);
+            this.txb_mathukho.TabIndex = 5;
+            // 
+            // txb_mahang
+            // 
+            this.txb_mahang.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txb_mahang.FormattingEnabled = true;
+            this.txb_mahang.Location = new System.Drawing.Point(109, 4);
+            this.txb_mahang.Name = "txb_mahang";
+            this.txb_mahang.Size = new System.Drawing.Size(123, 26);
+            this.txb_mahang.TabIndex = 6;
+            // 
+            // txb_mancc
+            // 
+            this.txb_mancc.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txb_mancc.FormattingEnabled = true;
+            this.txb_mancc.Location = new System.Drawing.Point(109, 26);
+            this.txb_mancc.Name = "txb_mancc";
+            this.txb_mancc.Size = new System.Drawing.Size(123, 26);
+            this.txb_mancc.TabIndex = 7;
+            // 
+            // btn_luu
+            // 
+            this.btn_luu.BackColor = System.Drawing.Color.Transparent;
+            this.btn_luu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_luu.BackgroundImage")));
+            this.btn_luu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_luu.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_luu.ForeColor = System.Drawing.Color.Navy;
+            this.btn_luu.Location = new System.Drawing.Point(12, 179);
+            this.btn_luu.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_luu.Name = "btn_luu";
+            this.btn_luu.Size = new System.Drawing.Size(122, 39);
+            this.btn_luu.TabIndex = 8;
+            this.btn_luu.Text = "Lưu";
+            this.btn_luu.UseVisualStyleBackColor = false;
+            this.btn_luu.Click += new System.EventHandler(this.btn_fixpn_Click);
+            // 
+            // maphieunhap
+            // 
+            this.maphieunhap.DataPropertyName = "maphieunhap";
+            this.maphieunhap.HeaderText = "Mã phiếu nhập";
+            this.maphieunhap.Name = "maphieunhap";
+            this.maphieunhap.Width = 120;
+            // 
+            // ngaynhap
+            // 
+            this.ngaynhap.DataPropertyName = "ngaynhap";
+            this.ngaynhap.HeaderText = "Ngày nhập";
+            this.ngaynhap.Name = "ngaynhap";
+            // 
+            // manhanvien
+            // 
+            this.manhanvien.DataPropertyName = "manhanvien";
+            this.manhanvien.HeaderText = "Mã nhân viên";
+            this.manhanvien.Name = "manhanvien";
+            // 
+            // masach
+            // 
+            this.masach.DataPropertyName = "masach";
+            this.masach.HeaderText = "Mã sách";
+            this.masach.Name = "masach";
+            // 
+            // soluong
+            // 
+            this.soluong.DataPropertyName = "soluong";
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.Name = "soluong";
+            // 
+            // mancc
+            // 
+            this.mancc.DataPropertyName = "mancc";
+            this.mancc.HeaderText = "Mã nhà cung cấp";
+            this.mancc.Name = "mancc";
+            this.mancc.Width = 120;
+            // 
             // PhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PhamMemQuanLyKho1._1.Properties.Resources.awesome_collection_of_simple_background_on_hd_wallpapers_elegant_formal_powerpoint_background_designs_640x480;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(963, 494);
+            this.ClientSize = new System.Drawing.Size(1157, 494);
             this.Controls.Add(this.dtgv_phieunhap);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
@@ -470,23 +539,20 @@
         private System.Windows.Forms.Button btn_clearpn;
         private System.Windows.Forms.Button btn_addpn;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox txb_mancc;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btn_exitpn;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btn_fixpn;
+        private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dtgv_phieunhap;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox txb_soluong;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txb_mathukho;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txb_ngaynhap;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txb_mahang;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
@@ -498,5 +564,15 @@
         private System.Windows.Forms.TextBox txb_maphieunhap;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox txb_mancc;
+        private System.Windows.Forms.Button btn_luu;
+        private System.Windows.Forms.ComboBox txb_mahang;
+        private System.Windows.Forms.ComboBox txb_mathukho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maphieunhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaynhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manhanvien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn masach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mancc;
     }
 }

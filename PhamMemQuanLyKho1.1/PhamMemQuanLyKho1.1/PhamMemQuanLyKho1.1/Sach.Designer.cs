@@ -36,7 +36,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.txb_make = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnSua = new System.Windows.Forms.Button();
@@ -52,11 +51,18 @@
             this.txb_tensach = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txb_loaisach = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txb_masach = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txb_loaisach = new System.Windows.Forms.ComboBox();
+            this.txb_make = new System.Windows.Forms.ComboBox();
+            this.masach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tensach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenloaisach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.make = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_sach)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -72,6 +78,12 @@
             // 
             this.dtgv_sach.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtgv_sach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_sach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.masach,
+            this.tensach,
+            this.tenloaisach,
+            this.soluong,
+            this.make});
             this.dtgv_sach.Location = new System.Drawing.Point(424, 56);
             this.dtgv_sach.Margin = new System.Windows.Forms.Padding(2);
             this.dtgv_sach.Name = "dtgv_sach";
@@ -105,6 +117,7 @@
             this.button1.Size = new System.Drawing.Size(27, 31);
             this.button1.TabIndex = 25;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txb_searchid
             // 
@@ -114,6 +127,7 @@
             this.txb_searchid.Name = "txb_searchid";
             this.txb_searchid.Size = new System.Drawing.Size(186, 23);
             this.txb_searchid.TabIndex = 2;
+            this.txb_searchid.TextChanged += new System.EventHandler(this.txb_searchid_TextChanged);
             // 
             // label7
             // 
@@ -154,15 +168,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(241, 50);
             this.panel8.TabIndex = 6;
-            // 
-            // txb_make
-            // 
-            this.txb_make.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_make.Location = new System.Drawing.Point(109, 3);
-            this.txb_make.Margin = new System.Windows.Forms.Padding(2);
-            this.txb_make.Name = "txb_make";
-            this.txb_make.Size = new System.Drawing.Size(123, 26);
-            this.txb_make.TabIndex = 4;
             // 
             // label6
             // 
@@ -349,21 +354,13 @@
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.txb_loaisach);
+            this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(10, 187);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(241, 50);
             this.panel4.TabIndex = 0;
-            // 
-            // txb_loaisach
-            // 
-            this.txb_loaisach.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_loaisach.Location = new System.Drawing.Point(109, 5);
-            this.txb_loaisach.Margin = new System.Windows.Forms.Padding(2);
-            this.txb_loaisach.Name = "txb_loaisach";
-            this.txb_loaisach.Size = new System.Drawing.Size(123, 26);
-            this.txb_loaisach.TabIndex = 3;
             // 
             // label3
             // 
@@ -409,6 +406,62 @@
             this.txb_masach.Size = new System.Drawing.Size(123, 26);
             this.txb_masach.TabIndex = 1;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(109, 7);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(0, 21);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // txb_loaisach
+            // 
+            this.txb_loaisach.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txb_loaisach.FormattingEnabled = true;
+            this.txb_loaisach.Location = new System.Drawing.Point(109, 7);
+            this.txb_loaisach.Name = "txb_loaisach";
+            this.txb_loaisach.Size = new System.Drawing.Size(123, 26);
+            this.txb_loaisach.TabIndex = 5;
+            // 
+            // txb_make
+            // 
+            this.txb_make.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txb_make.FormattingEnabled = true;
+            this.txb_make.Location = new System.Drawing.Point(109, 4);
+            this.txb_make.Name = "txb_make";
+            this.txb_make.Size = new System.Drawing.Size(123, 26);
+            this.txb_make.TabIndex = 6;
+            // 
+            // masach
+            // 
+            this.masach.DataPropertyName = "masach";
+            this.masach.HeaderText = "Mã sách";
+            this.masach.Name = "masach";
+            // 
+            // tensach
+            // 
+            this.tensach.DataPropertyName = "tensach";
+            this.tensach.HeaderText = "Tên sách";
+            this.tensach.Name = "tensach";
+            // 
+            // tenloaisach
+            // 
+            this.tenloaisach.DataPropertyName = "tenloaisach";
+            this.tenloaisach.HeaderText = "Tên loại sách";
+            this.tenloaisach.Name = "tenloaisach";
+            // 
+            // soluong
+            // 
+            this.soluong.DataPropertyName = "soluong";
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.Name = "soluong";
+            // 
+            // make
+            // 
+            this.make.DataPropertyName = "make";
+            this.make.HeaderText = "Mã kệ";
+            this.make.Name = "make";
+            // 
             // Sach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,7 +504,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox txb_make;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btn_exit;
@@ -466,11 +518,18 @@
         private System.Windows.Forms.TextBox txb_tensach;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txb_loaisach;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txb_masach;
         private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.ComboBox txb_make;
+        private System.Windows.Forms.ComboBox txb_loaisach;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn masach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tensach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenloaisach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn make;
     }
 }

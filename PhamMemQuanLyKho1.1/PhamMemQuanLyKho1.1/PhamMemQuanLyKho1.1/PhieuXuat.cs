@@ -12,6 +12,7 @@ namespace PhamMemQuanLyKho1._1
 {
     public partial class PhieuXuat : Form
     {
+        int a = 0;
         public PhieuXuat()
         {
             InitializeComponent();
@@ -21,6 +22,30 @@ namespace PhamMemQuanLyKho1._1
             string thongtin = @"exec dbo.infophieuxuat";
             DataTable dt = connect.getDataTable(thongtin);
             dtgv_phieuxuat.DataSource = dt;
+
+            string thongtin2 = @"exec dbo.phieuxuatnv";
+            DataTable dt2 = connect.getDataTable(thongtin2);
+            txb_mathukho.DataSource = dt2;
+            txb_mathukho.DisplayMember = "manhanvien";
+
+            string thongtin3 = @"exec dbo.phieuxuats";
+            DataTable dt3 = connect.getDataTable(thongtin3);
+            txb_mahang.DataSource = dt3;
+            txb_mahang.DisplayMember = "masach";
+
+            string thongtin4 = @"exec dbo.phieuxuatmkh";
+            DataTable dt4 = connect.getDataTable(thongtin4);
+            txb_makhachhang.DataSource = dt4;
+            txb_makhachhang.DisplayMember = "makhachhang";
+
+
+            txb_maphieuxuat.Enabled = false;
+            txb_ngayxuat.Enabled = false;
+            txb_mathukho.Enabled = false;
+            txb_mahang.Enabled = false;
+            txb_soluong.Enabled = false;
+            txb_makhachhang.Enabled = false;
+            txb_trangthai.Enabled = false;
         }
 
         private void btn_exitpx_Click(object sender, EventArgs e)
@@ -30,13 +55,14 @@ namespace PhamMemQuanLyKho1._1
 
         private void btn_clearpx_Click(object sender, EventArgs e)
         {
-            this.txb_makhachhang.Clear();
+            this.txb_makhachhang.ResetText();
             this.txb_maphieuxuat.Clear();
             this.txb_ngayxuat.Clear();
-            this.txb_mathukho.Clear();
-            this.txb_mahang.Clear();
+            this.txb_mathukho.ResetText();
+            this.txb_mahang.ResetText();
             this.txb_soluong.Clear();
-            this.txb_trangthai.Clear();
+            this.txb_trangthai.ResetText();
+            loaddulieu();
         }
 
         private void dtgv_phieuxuat_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -53,40 +79,74 @@ namespace PhamMemQuanLyKho1._1
 
         private void btn_addpx_Click(object sender, EventArgs e)
         {
-            string kiemtrancc = @"exec dbo.kiemtraphieuxuat N'" + txb_maphieuxuat.Text + "'";
-            DataTable dt = connect.getDataTable(kiemtrancc);
-            if (dt.Rows.Count == 0)
-            {
-                string themvao = @"exec dbo.themphieunhap N'" + txb_maphieuxuat.Text + "',N'" + txb_ngayxuat.Text
-                    + "',N'" + txb_mathukho.Text + "',N'" + txb_mahang.Text + "',N'" + txb_soluong.Text + "',N'" + txb_makhachhang.Text + "',N'" + txb_trangthai.Text + "'";
-                connect.executeQuery(themvao);
-                DialogResult dialog = MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loaddulieu();
-            }
-            else
-            {
-                DialogResult dialog = MessageBox.Show("Mã phiếu nhập đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            a = 1;
+            txb_maphieuxuat.Enabled = true;
+            txb_ngayxuat.Enabled = true;
+            txb_mathukho.Enabled = true;
+            txb_mahang.Enabled = true;
+            txb_soluong.Enabled = true;
+            txb_makhachhang.Enabled = true;
+            txb_trangthai.Enabled = true;
+            
         }
 
         private void btn_fixpx_Click(object sender, EventArgs e)
         {
-            string sua = @"exec dbo.suaphieuxuat N'" + txb_maphieuxuat.Text + "',N'" + txb_ngayxuat.Text
-                   + "',N'" + txb_mathukho.Text + "',N'" + txb_mahang.Text + "',N'" + txb_soluong.Text + "',N'" + txb_makhachhang.Text + "',N'" + txb_trangthai.Text + "'";
-            DialogResult dialog = MessageBox.Show("Bạn có chắc là muốn sửa thông tin", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialog == DialogResult.Yes)
+            if(a == 1)
             {
-                try
+                string kiemtrancc = @"exec dbo.kiemtraphieuxuat N'" + txb_maphieuxuat.Text + "'";
+                DataTable dt = connect.getDataTable(kiemtrancc);
+                if (dt.Rows.Count == 0)
                 {
-                    connect.executeQuery(sua);
-                    MessageBox.Show("Sửa thành công");
+                    string themvao = @"exec dbo.themphieunhap N'" + txb_maphieuxuat.Text + "',N'" + txb_ngayxuat.Text
+                        + "',N'" + txb_mathukho.Text + "',N'" + txb_mahang.Text + "',N'" + txb_soluong.Text + "',N'" + txb_makhachhang.Text + "',N'" + txb_trangthai.Text + "'";
+                    connect.executeQuery(themvao);
+                    DialogResult dialog = MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loaddulieu();
                 }
-                catch
+                else
                 {
-                    MessageBox.Show("Lỗi thực thi !!!");
+                    DialogResult dialog = MessageBox.Show("Mã phiếu nhập đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            else if (a == 2)
+            {
+                string sua = @"exec dbo.suaphieuxuat N'" + txb_maphieuxuat.Text + "',N'" + txb_ngayxuat.Text
+                   + "',N'" + txb_mathukho.Text + "',N'" + txb_mahang.Text + "',N'" + txb_soluong.Text + "',N'" + txb_makhachhang.Text + "',N'" + txb_trangthai.Text + "'";
+                DialogResult dialog = MessageBox.Show("Bạn có chắc là muốn sửa thông tin", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialog == DialogResult.Yes)
+                {
+                    try
+                    {
+                        connect.executeQuery(sua);
+                        MessageBox.Show("Sửa thành công");
+                        loaddulieu();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Lỗi thực thi !!!");
+                    }
+                }
+            }
+            a = 0;
+            
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            a = 2;
+            txb_maphieuxuat.Enabled = false;
+            txb_ngayxuat.Enabled = true;
+            txb_mathukho.Enabled = true;
+            txb_mahang.Enabled = true;
+            txb_soluong.Enabled = true;
+            txb_makhachhang.Enabled = true;
+            txb_trangthai.Enabled = true;
+        }
+
+        private void PhieuXuat_Load(object sender, EventArgs e)
+        {
+            loaddulieu();
         }
     }
 }

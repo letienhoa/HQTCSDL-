@@ -12,6 +12,7 @@ namespace PhamMemQuanLyKho1._1
 {
     public partial class NhaCungCap : Form
     {
+        int a = 0;
         public NhaCungCap()
         {
             InitializeComponent();
@@ -21,6 +22,12 @@ namespace PhamMemQuanLyKho1._1
             string thongtin = @"exec dbo.thongtinncc";
             DataTable dt = connect.getDataTable(thongtin);
             dtgv_nhacungcap.DataSource = dt;
+
+            txb_mancc.Enabled = false;
+            txb_tennhacungcap.Enabled = false;
+            txb_diachi.Enabled = false;
+            txb_sdt.Enabled = false;
+
         }
         private void btn_clearncc_Click(object sender, EventArgs e)
         {
@@ -28,6 +35,7 @@ namespace PhamMemQuanLyKho1._1
             this.txb_tennhacungcap.Clear();
             this.txb_diachi.Clear();
             this.txb_sdt.Clear();
+            loaddulieu();
         }
 
         private void btn_exitncc_Click(object sender, EventArgs e)
@@ -37,20 +45,12 @@ namespace PhamMemQuanLyKho1._1
 
         private void btn_addncc_Click(object sender, EventArgs e)
         {
-            string kiemtrancc = @"exec dbo.kiemtrancc N'" + txb_mancc.Text + "'";
-            DataTable dt = connect.getDataTable(kiemtrancc);
-            if (dt.Rows.Count == 0)
-            {
-                string themvao = @"exec dbo.themncc N'" + txb_mancc.Text + "',N'" + txb_tennhacungcap.Text
-                    + "',N'" + txb_diachi.Text + "',N'" + txb_sdt.Text + "'";
-                connect.executeQuery(themvao);
-                DialogResult dialog = MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loaddulieu();
-            }
-            else
-            {
-                DialogResult dialog = MessageBox.Show("Mã nhà cung cấp đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            a = 1;
+            txb_mancc.Enabled = true;
+            txb_tennhacungcap.Enabled = true;
+            txb_diachi.Enabled = true;
+            txb_sdt.Enabled = true;
+
         }
 
         private void NhaCungCap_Load(object sender, EventArgs e)
@@ -60,22 +60,45 @@ namespace PhamMemQuanLyKho1._1
 
         private void btn_fixncc_Click(object sender, EventArgs e)
         {
-            string sua= @"exec dbo.suancc N'"+txb_mancc.Text+"',N'" + txb_tennhacungcap.Text
-                    + "',N'" + txb_diachi.Text + "',N'" + txb_sdt.Text + "'";
-            DialogResult dialog = MessageBox.Show("Bạn có chắc là muốn sửa thông tin", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialog == DialogResult.Yes)
+            if(a == 2)
             {
-                try 
+
+                string kiemtrancc = @"exec dbo.kiemtrancc N'" + txb_mancc.Text + "'";
+                DataTable dt = connect.getDataTable(kiemtrancc);
+                if (dt.Rows.Count == 0)
                 {
-                    connect.executeQuery(sua);
-                    MessageBox.Show("Sửa thành công");
+                    string themvao = @"exec dbo.themncc N'" + txb_mancc.Text + "',N'" + txb_tennhacungcap.Text
+                        + "',N'" + txb_diachi.Text + "',N'" + txb_sdt.Text + "'";
+                    connect.executeQuery(themvao);
+                    DialogResult dialog = MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loaddulieu();
                 }
-                catch
+                else
                 {
-                    MessageBox.Show("Lỗi thực thi !!!");
+                    DialogResult dialog = MessageBox.Show("Mã nhà cung cấp đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            else if (a == 1)
+            {
+                string sua = @"exec dbo.suancc N'" + txb_mancc.Text + "',N'" + txb_tennhacungcap.Text
+                   + "',N'" + txb_diachi.Text + "',N'" + txb_sdt.Text + "'";
+                DialogResult dialog = MessageBox.Show("Bạn có chắc là muốn sửa thông tin", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialog == DialogResult.Yes)
+                {
+                    try
+                    {
+                        connect.executeQuery(sua);
+                        MessageBox.Show("Sửa thành công");
+                        loaddulieu();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Lỗi thực thi !!!");
+                    }
+                }
+            }
+            a = 0;
+           
 
         }
 
@@ -118,8 +141,19 @@ namespace PhamMemQuanLyKho1._1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string s = txb_searchid.Text;
+            string kiemtra = @"exec dbo.searchncc N'" + s + "'";
+            DataTable dt = connect.getDataTable(kiemtra);
+            dtgv_nhacungcap.DataSource = dt;
         }
 
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            a = 2;
+            txb_mancc.Enabled = false;
+            txb_tennhacungcap.Enabled = true;
+            txb_diachi.Enabled = true;
+            txb_sdt.Enabled = true;
+        }
     }
 }

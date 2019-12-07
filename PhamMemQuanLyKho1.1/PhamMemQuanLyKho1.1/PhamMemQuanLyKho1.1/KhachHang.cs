@@ -35,7 +35,7 @@ namespace PhamMemQuanLyKho1._1
             this.txb_ma.Clear();
             this.txb_ten.Clear();
             this.txb_diachi.Clear();
-            this.txb_sex.Clear();
+            this.txb_sex.ResetText();
             loaddulieu();
         }
         private void dtgv_khachhang_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -23,7 +23,7 @@ create table account
 	);
 
 --------------------------------
---Nhóm hàng hóa
+--Nhóm loai sach
 create table loaisach
 	(
 		tenloaisach  varchar(8) not null,
@@ -101,9 +101,9 @@ create table loaisach
 		maphieunhap  varchar(8) not null,
 		ngaynhap     date not null,
 		manhanvien  varchar(8)not null ,
-		mancc  varchar(8) not null,
-        soluong   int,
 		masach	   varchar(8) not null,
+        soluong   int,		
+		mancc  varchar(8) not null,
 		constraint pk_phieunhap primary key (maphieunhap),
 		constraint ck_phieunhap_nv foreign key (manhanvien) references nhanvien(manhanvien),
 		constraint ck_phieunhap_ncc foreign key (mancc) references nhacungcap(mancc),
@@ -284,10 +284,9 @@ insert into sach values
 ('S0004','Huong Dan nau an','GiaDinh','55','KE003');
 
 insert into phieunhap values
-('PN001','2019-10-24','NV01','NCC111','2','S0003'),
-('PN002','2019-12-06','NV04','NCC112','3','S0001'),
-('PN003','2019-07-10','NV04','NCC114','1','S0002'),
-('PN004','2019-06-11','NV01','NCC113','2','S0003');
+('PN001','2019-10-24','NV01','S0003','2','NCC111'),
+('PN002','2019-12-06','NV04','S0001','3','NCC112'),
+('PN003','2019-07-10','NV04','S0002','1','NCC114');
 
 insert into phieuxuat values
 ('PX001','2019-11-24','NV01','S0003','2','KH113','Đã xử lý'),
@@ -357,6 +356,24 @@ as
 	select *from phieunhap
 go
 
+--lay ma nhan vien
+create proc  phieunhapmanv
+as
+	select manhanvien from nhanvien
+go
+
+--lay ma sach
+create proc  phieunhapmasach
+as
+	select masach from sach
+go
+
+--lay ma nha cung cap
+create proc  phieunhapmancc
+as
+	select mancc from nhacungcap
+go
+
 
 create proc thongtinphieunhapid @idsach varchar(8)
 as
@@ -376,14 +393,14 @@ go
 
 -----thêm phiếu nhập
 create proc themphieunhap(@maphieunhap varchar(8),@ngaynhap date,@mathukho varchar(8),@mancc varchar(8),
-	@soluong int,@mahang varchar(8),@trangthai varchar(20))
+	@soluong int,@mahang varchar(8))
 	as
 		begin
 			IF	@maphieunhap = '' THROW 50001, 'Mã phiếu nhập không được để trống!', 1;
 			IF	@mahang = '' THROW 50001, 'Mã  sách không được để trống!', 1;
 			IF	@mathukho='' THROW 50001, 'Mã nhân viên không được để trống!', 1;
 			IF	@ngaynhap ='' THROW 50001, 'Ngày không được để trống!', 1;
-			insert into phieunhap values(@maphieunhap,@ngaynhap,@mathukho,@mancc,@soluong,@mahang)
+			insert into phieunhap values(@maphieunhap,@ngaynhap,@mathukho,@mahang,@soluong,@mancc)
 		end
 	go
 	--sửa phiếu nhập
@@ -396,7 +413,7 @@ create proc suaphieunhap(@maphieunhap varchar(8),@ngaynhap date,@mathukho varcha
 			IF	@mathukho='' THROW 50001, 'Mã nhân viên không được để trống!', 1;
 			IF	@ngaynhap ='' THROW 50001, 'Ngày không được để trống!', 1;
 			update phieunhap set maphieunhap =@maphieunhap,ngaynhap= @ngaynhap,
-			manhanvien=@mathukho,mancc= @mancc,soluong= @soluong,masach= @mahang
+			manhanvien=@mathukho,masach= @mahang, soluong= @soluong, mancc= @mancc
 		end
 	go
 
@@ -407,6 +424,24 @@ create proc suaphieunhap(@maphieunhap varchar(8),@ngaynhap date,@mathukho varcha
 create proc  infophieuxuat
 as
 	select *from phieuxuat
+go
+
+--lay ma nhan vien
+create proc  phieuxuatnv
+as
+	select manhanvien from nhanvien
+go
+
+--lay ma sach
+create proc  phieuxuats
+as
+	select masach from sach
+go
+
+--lay ma khach hang
+create proc  phieuxuatmkh
+as
+	select makhachhang from khachhang
 go
 
 create proc thongtinphieuxuatid @idsach varchar(8)
@@ -510,6 +545,64 @@ go
 
 
 ---------------------------------------------------------------------------
+
+-----------------------------NHÂN VIÊN----------------------------------
+
+-- tra cứu thông tin nhân viên
+create proc thongtinnv
+as
+	select * from  nhanvien
+go
+
+
+create proc thongtinnv2
+as
+	select mabophan from  bophannv
+go
+
+create proc thongtinvid @idmanv varchar(8)
+as
+	select * from  nhanvien where manhanvien=@idmanv
+go
+
+--kiem tra truoc khi them vao
+create proc kiemtranv(@manhanvien varchar(8))
+as
+	select * from nhanvien where manhanvien=@manhanvien
+go
+
+-- thêm nhân viên
+create proc themnv(@manhanvien varchar(8),@tennhanvien varchar(20),@diachinhanvien varchar(20),@sex varchar(12),@mabophannv varchar(12))
+as
+	insert into nhanvien values(@manhanvien,@tennhanvien,@diachinhanvien,@sex, @mabophannv)
+go
+
+--sửa nhân viên
+create proc suanv (@manhanvien varchar(8),@tennhanvien varchar(20),@diachinhanvien varchar(20),@sex varchar(12),@mabophannv varchar(12))
+as
+	begin
+		update nhanvien set tennhanvien= @tennhanvien,
+		diachi= @diachinhanvien,sex = @sex , mabophan = @mabophannv where manhanvien=@manhanvien
+	end
+go
+
+create proc xoanv @manhanvien varchar(8)
+as
+	begin
+		delete  from nhanvien where manhanvien=@manhanvien
+	end
+go 
+
+create proc searchnv @id varchar(8)
+as
+	select * from nhanvien where manhanvien=@id
+go
+
+--exec dbo.themnv 'NV06','Pham Quynh Anh','Tien Giang','Nu','BP01'
+
+-----------------------------------------------------------------
+
+
 -----------------------------NHÀ CUNG CẤP----------------------------------
 
 -- tra cứu thông tin nha cung cấp
@@ -627,7 +720,7 @@ as
 go
 
 -- thêm vào 
-create proc themkhachang(@makhachhang varchar(8),@tenkhachhang varchar(20),@sex varchar(10), @diachi  varchar(20))
+create proc themkhachhang(@makhachhang varchar(8),@tenkhachhang varchar(20),@sex varchar(10), @diachi  varchar(20))
 as
 	insert into khachhang values(@makhachhang,@tenkhachhang,@sex,@diachi)
 go 
@@ -642,7 +735,7 @@ as
 go
   
 -- xoa khachhang
-create proc xoakkhachhang @makhachhang varchar(8)
+create proc xoakhachhang @makhachhang varchar(8)
 as
 	begin
 		delete  from khachhang where makhachhang=@makhachhang
@@ -756,6 +849,18 @@ as
 	select * from  sach
 go
 
+--lay ma loai sach
+create proc thongtinsach2
+as
+	select tenloaisach from  loaisach
+go
+
+--lay ma ke
+create proc thongtinsach3
+as
+	select make from  ke
+go
+
 --lay theo id
 create proc thongtinsachid @idsach varchar(8)
 as
@@ -821,5 +926,10 @@ as
 	end
 go
 
-exec dbo.themsach N'S0008',N'Huong Dan nau an',N'GiaDinh',N'KE003'
+-- exec dbo.themsach N'S0008',N'Huong Dan nau an',N'GiaDinh',N'KE003'
+go
+
+create proc searchsach @id varchar(8)
+as
+	select * from sach where masach=@id
 go

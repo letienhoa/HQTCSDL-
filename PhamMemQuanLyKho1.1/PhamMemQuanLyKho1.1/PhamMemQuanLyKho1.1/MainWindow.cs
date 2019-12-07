@@ -160,10 +160,12 @@ namespace PhamMemQuanLyKho1._1
                 MyLogin lg = new MyLogin();
                 lg.ShowDialog();
                 loadDATA();
+
+                
             }
             else if(dialog == DialogResult.Cancel)
             {
-                this.Close();
+                loadDATAlogout();
             }
 
         }

@@ -21,8 +21,8 @@ namespace PhamMemQuanLyKho1._1
         {
             this.txb_masach.Clear();
             this.txb_tensach.Clear();
-            this.txb_loaisach.Clear();
-            this.txb_make.Clear();
+            this.txb_loaisach.ResetText();
+            this.txb_make.ResetText();
             this.txb_soluong.Clear();
         }
         public void loaddulieu()
@@ -30,6 +30,18 @@ namespace PhamMemQuanLyKho1._1
             string thongtin = @"exec dbo.thongtinsach";
             DataTable dt = connect.getDataTable(thongtin);
             dtgv_sach.DataSource = dt;
+
+            string thongtin2 = @"exec dbo.thongtinsach2";
+            DataTable dt2 = connect.getDataTable(thongtin2);
+            txb_loaisach.DataSource = dt2;
+            txb_loaisach.DisplayMember = "tenloaisach";
+
+            string thongtin3 = @"exec dbo.thongtinsach3";
+            DataTable dt3 = connect.getDataTable(thongtin3);
+            txb_make.DataSource = dt3;
+            txb_make.DisplayMember = "make";
+
+
             txb_masach.Enabled = false;
             txb_tensach.Enabled = false;
             txb_loaisach.Enabled = false;
@@ -56,7 +68,7 @@ namespace PhamMemQuanLyKho1._1
             txb_tensach.Enabled = true;
             txb_loaisach.Enabled = true;
             txb_make.Enabled = true;
-            txb_soluong.Enabled = true;
+            txb_soluong.Enabled = false;
         }
 
         private void btn_fix_Click(object sender, EventArgs e)
@@ -121,6 +133,22 @@ namespace PhamMemQuanLyKho1._1
             txb_tensach.Enabled = true;
             txb_loaisach.Enabled = true;
             txb_make.Enabled = true;
+        }
+
+        private void txb_searchid_TextChanged(object sender, EventArgs e)
+        {
+            string s = txb_searchid.Text;
+            string kiemtra = @"exec dbo.searchsach N'" + s + "'";
+            DataTable dt = connect.getDataTable(kiemtra);
+            dtgv_sach.DataSource = dt;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string s = txb_searchid.Text;
+            string kiemtra = @"exec dbo.searchsach N'" + s + "'";
+            DataTable dt = connect.getDataTable(kiemtra);
+            dtgv_sach.DataSource = dt;
         }
     }
 }

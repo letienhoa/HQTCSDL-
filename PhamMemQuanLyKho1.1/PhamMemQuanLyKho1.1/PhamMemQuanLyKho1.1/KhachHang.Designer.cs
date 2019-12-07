@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhachHang));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_luu = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_clearn = new System.Windows.Forms.Button();
@@ -44,21 +45,20 @@
             this.txb_ten = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txb_sex = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txb_ma = new System.Windows.Forms.TextBox();
             this.dtgv_khachhang = new System.Windows.Forms.DataGridView();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txb_searchid = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btn_luu = new System.Windows.Forms.Button();
             this.makhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenkhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txb_searchid = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txb_sex = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -99,6 +99,22 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(133, 323);
             this.panel6.TabIndex = 5;
+            // 
+            // btn_luu
+            // 
+            this.btn_luu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btn_luu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_luu.BackgroundImage")));
+            this.btn_luu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_luu.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_luu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_luu.Location = new System.Drawing.Point(12, 161);
+            this.btn_luu.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_luu.Name = "btn_luu";
+            this.btn_luu.Size = new System.Drawing.Size(104, 39);
+            this.btn_luu.TabIndex = 8;
+            this.btn_luu.Text = "Lưu";
+            this.btn_luu.UseVisualStyleBackColor = false;
+            this.btn_luu.Click += new System.EventHandler(this.btn_fix_Click);
             // 
             // btn_exit
             // 
@@ -267,15 +283,6 @@
             this.panel4.Size = new System.Drawing.Size(183, 78);
             this.panel4.TabIndex = 0;
             // 
-            // txb_sex
-            // 
-            this.txb_sex.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_sex.Location = new System.Drawing.Point(4, 40);
-            this.txb_sex.Margin = new System.Windows.Forms.Padding(2);
-            this.txb_sex.Name = "txb_sex";
-            this.txb_sex.Size = new System.Drawing.Size(166, 26);
-            this.txb_sex.TabIndex = 3;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -338,6 +345,30 @@
             this.dtgv_khachhang.TabIndex = 5;
             this.dtgv_khachhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_khachhang_CellClick);
             // 
+            // makhachhang
+            // 
+            this.makhachhang.DataPropertyName = "makhachhang";
+            this.makhachhang.HeaderText = "Mã khách hàng";
+            this.makhachhang.Name = "makhachhang";
+            // 
+            // tenkhachhang
+            // 
+            this.tenkhachhang.DataPropertyName = "tenkhachhang";
+            this.tenkhachhang.HeaderText = "Tên khách hàng";
+            this.tenkhachhang.Name = "tenkhachhang";
+            // 
+            // sex
+            // 
+            this.sex.DataPropertyName = "sex";
+            this.sex.HeaderText = "Giới tính";
+            this.sex.Name = "sex";
+            // 
+            // diachi
+            // 
+            this.diachi.DataPropertyName = "diachi";
+            this.diachi.HeaderText = "Địa chỉ";
+            this.diachi.Name = "diachi";
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
@@ -385,45 +416,17 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "Tìm kiếm:   ID";
             // 
-            // btn_luu
+            // txb_sex
             // 
-            this.btn_luu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btn_luu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_luu.BackgroundImage")));
-            this.btn_luu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_luu.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_luu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btn_luu.Location = new System.Drawing.Point(12, 161);
-            this.btn_luu.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_luu.Name = "btn_luu";
-            this.btn_luu.Size = new System.Drawing.Size(104, 39);
-            this.btn_luu.TabIndex = 8;
-            this.btn_luu.Text = "Lưu";
-            this.btn_luu.UseVisualStyleBackColor = false;
-            this.btn_luu.Click += new System.EventHandler(this.btn_fix_Click);
-            // 
-            // makhachhang
-            // 
-            this.makhachhang.DataPropertyName = "makhachhang";
-            this.makhachhang.HeaderText = "Mã khách hàng";
-            this.makhachhang.Name = "makhachhang";
-            // 
-            // tenkhachhang
-            // 
-            this.tenkhachhang.DataPropertyName = "tenkhachhang";
-            this.tenkhachhang.HeaderText = "Tên khách hàng";
-            this.tenkhachhang.Name = "tenkhachhang";
-            // 
-            // sex
-            // 
-            this.sex.DataPropertyName = "sex";
-            this.sex.HeaderText = "Giới tính";
-            this.sex.Name = "sex";
-            // 
-            // diachi
-            // 
-            this.diachi.DataPropertyName = "diachi";
-            this.diachi.HeaderText = "Địa chỉ";
-            this.diachi.Name = "diachi";
+            this.txb_sex.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txb_sex.FormattingEnabled = true;
+            this.txb_sex.Items.AddRange(new object[] {
+            "Nam",
+            "Nu"});
+            this.txb_sex.Location = new System.Drawing.Point(4, 37);
+            this.txb_sex.Name = "txb_sex";
+            this.txb_sex.Size = new System.Drawing.Size(166, 26);
+            this.txb_sex.TabIndex = 3;
             // 
             // KhachHang
             // 
@@ -474,7 +477,6 @@
         private System.Windows.Forms.TextBox txb_ten;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txb_sex;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
@@ -489,5 +491,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tenkhachhang;
         private System.Windows.Forms.DataGridViewTextBoxColumn sex;
         private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
+        private System.Windows.Forms.ComboBox txb_sex;
     }
 }

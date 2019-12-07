@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhaCungCap));
             this.dtgv_nhacungcap = new System.Windows.Forms.DataGridView();
+            this.mancc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachincc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sotk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txb_tennhacungcap = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,9 +55,10 @@
             this.btn_exitncc = new System.Windows.Forms.Button();
             this.btn_deletencc = new System.Windows.Forms.Button();
             this.btn_clearncc = new System.Windows.Forms.Button();
-            this.btn_fixncc = new System.Windows.Forms.Button();
+            this.btn_sua = new System.Windows.Forms.Button();
             this.btn_addncc = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_luu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_nhacungcap)).BeginInit();
             this.panel3.SuspendLayout();
@@ -67,14 +72,46 @@
             // 
             // dtgv_nhacungcap
             // 
+            this.dtgv_nhacungcap.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dtgv_nhacungcap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_nhacungcap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mancc,
+            this.tenncc,
+            this.diachincc,
+            this.sotk});
             this.dtgv_nhacungcap.Location = new System.Drawing.Point(332, 52);
             this.dtgv_nhacungcap.Margin = new System.Windows.Forms.Padding(2);
             this.dtgv_nhacungcap.Name = "dtgv_nhacungcap";
             this.dtgv_nhacungcap.RowHeadersWidth = 51;
             this.dtgv_nhacungcap.RowTemplate.Height = 24;
-            this.dtgv_nhacungcap.Size = new System.Drawing.Size(424, 368);
+            this.dtgv_nhacungcap.Size = new System.Drawing.Size(494, 368);
             this.dtgv_nhacungcap.TabIndex = 13;
+            // 
+            // mancc
+            // 
+            this.mancc.DataPropertyName = "mancc";
+            this.mancc.HeaderText = "Mã nhà cung cấp";
+            this.mancc.Name = "mancc";
+            this.mancc.Width = 120;
+            // 
+            // tenncc
+            // 
+            this.tenncc.DataPropertyName = "tenncc";
+            this.tenncc.HeaderText = "Tên nhà cung cấp";
+            this.tenncc.Name = "tenncc";
+            this.tenncc.Width = 120;
+            // 
+            // diachincc
+            // 
+            this.diachincc.DataPropertyName = "diachincc";
+            this.diachincc.HeaderText = "Địa chỉ";
+            this.diachincc.Name = "diachincc";
+            // 
+            // sotk
+            // 
+            this.sotk.DataPropertyName = "sotk";
+            this.sotk.HeaderText = "Số điện thoại";
+            this.sotk.Name = "sotk";
             // 
             // panel3
             // 
@@ -198,7 +235,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(26, 16);
+            this.label5.Location = new System.Drawing.Point(11, 23);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(288, 29);
@@ -224,6 +261,7 @@
             this.txb_searchid.Name = "txb_searchid";
             this.txb_searchid.Size = new System.Drawing.Size(57, 23);
             this.txb_searchid.TabIndex = 2;
+            this.txb_searchid.TextChanged += new System.EventHandler(this.txb_searchid_TextChanged);
             // 
             // panel7
             // 
@@ -235,7 +273,7 @@
             this.panel7.Location = new System.Drawing.Point(329, 11);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(428, 35);
+            this.panel7.Size = new System.Drawing.Size(497, 35);
             this.panel7.TabIndex = 14;
             // 
             // button1
@@ -268,8 +306,8 @@
             this.btn_exitncc.BackColor = System.Drawing.Color.Transparent;
             this.btn_exitncc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_exitncc.BackgroundImage")));
             this.btn_exitncc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_exitncc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exitncc.ForeColor = System.Drawing.Color.Navy;
+            this.btn_exitncc.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exitncc.ForeColor = System.Drawing.Color.Red;
             this.btn_exitncc.Location = new System.Drawing.Point(12, 270);
             this.btn_exitncc.Margin = new System.Windows.Forms.Padding(2);
             this.btn_exitncc.Name = "btn_exitncc";
@@ -284,9 +322,9 @@
             this.btn_deletencc.BackColor = System.Drawing.Color.Transparent;
             this.btn_deletencc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_deletencc.BackgroundImage")));
             this.btn_deletencc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_deletencc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deletencc.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_deletencc.ForeColor = System.Drawing.Color.Navy;
-            this.btn_deletencc.Location = new System.Drawing.Point(12, 206);
+            this.btn_deletencc.Location = new System.Drawing.Point(12, 227);
             this.btn_deletencc.Margin = new System.Windows.Forms.Padding(2);
             this.btn_deletencc.Name = "btn_deletencc";
             this.btn_deletencc.Size = new System.Drawing.Size(84, 39);
@@ -300,9 +338,9 @@
             this.btn_clearncc.BackColor = System.Drawing.Color.Transparent;
             this.btn_clearncc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_clearncc.BackgroundImage")));
             this.btn_clearncc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_clearncc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clearncc.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clearncc.ForeColor = System.Drawing.Color.Navy;
-            this.btn_clearncc.Location = new System.Drawing.Point(12, 11);
+            this.btn_clearncc.Location = new System.Drawing.Point(12, 130);
             this.btn_clearncc.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clearncc.Name = "btn_clearncc";
             this.btn_clearncc.Size = new System.Drawing.Size(84, 39);
@@ -311,30 +349,30 @@
             this.btn_clearncc.UseVisualStyleBackColor = false;
             this.btn_clearncc.Click += new System.EventHandler(this.btn_clearncc_Click);
             // 
-            // btn_fixncc
+            // btn_sua
             // 
-            this.btn_fixncc.BackColor = System.Drawing.Color.Transparent;
-            this.btn_fixncc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_fixncc.BackgroundImage")));
-            this.btn_fixncc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_fixncc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_fixncc.ForeColor = System.Drawing.Color.Navy;
-            this.btn_fixncc.Location = new System.Drawing.Point(12, 140);
-            this.btn_fixncc.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_fixncc.Name = "btn_fixncc";
-            this.btn_fixncc.Size = new System.Drawing.Size(84, 39);
-            this.btn_fixncc.TabIndex = 5;
-            this.btn_fixncc.Text = "Sửa ";
-            this.btn_fixncc.UseVisualStyleBackColor = false;
-            this.btn_fixncc.Click += new System.EventHandler(this.btn_fixncc_Click);
+            this.btn_sua.BackColor = System.Drawing.Color.Transparent;
+            this.btn_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_sua.BackgroundImage")));
+            this.btn_sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_sua.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sua.ForeColor = System.Drawing.Color.Navy;
+            this.btn_sua.Location = new System.Drawing.Point(12, 59);
+            this.btn_sua.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_sua.Name = "btn_sua";
+            this.btn_sua.Size = new System.Drawing.Size(84, 39);
+            this.btn_sua.TabIndex = 5;
+            this.btn_sua.Text = "Sửa ";
+            this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_addncc
             // 
             this.btn_addncc.BackColor = System.Drawing.Color.Transparent;
             this.btn_addncc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_addncc.BackgroundImage")));
             this.btn_addncc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_addncc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addncc.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addncc.ForeColor = System.Drawing.Color.Navy;
-            this.btn_addncc.Location = new System.Drawing.Point(12, 75);
+            this.btn_addncc.Location = new System.Drawing.Point(12, 16);
             this.btn_addncc.Margin = new System.Windows.Forms.Padding(2);
             this.btn_addncc.Name = "btn_addncc";
             this.btn_addncc.Size = new System.Drawing.Size(84, 39);
@@ -346,16 +384,33 @@
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.btn_luu);
             this.panel6.Controls.Add(this.btn_exitncc);
             this.panel6.Controls.Add(this.btn_deletencc);
             this.panel6.Controls.Add(this.btn_clearncc);
-            this.panel6.Controls.Add(this.btn_fixncc);
+            this.panel6.Controls.Add(this.btn_sua);
             this.panel6.Controls.Add(this.btn_addncc);
             this.panel6.Location = new System.Drawing.Point(196, 83);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(106, 316);
             this.panel6.TabIndex = 5;
+            // 
+            // btn_luu
+            // 
+            this.btn_luu.BackColor = System.Drawing.Color.Transparent;
+            this.btn_luu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_luu.BackgroundImage")));
+            this.btn_luu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_luu.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_luu.ForeColor = System.Drawing.Color.Navy;
+            this.btn_luu.Location = new System.Drawing.Point(12, 173);
+            this.btn_luu.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_luu.Name = "btn_luu";
+            this.btn_luu.Size = new System.Drawing.Size(84, 39);
+            this.btn_luu.TabIndex = 8;
+            this.btn_luu.Text = "Lưu";
+            this.btn_luu.UseVisualStyleBackColor = false;
+            this.btn_luu.Click += new System.EventHandler(this.btn_fixncc_Click);
             // 
             // panel1
             // 
@@ -378,15 +433,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BackgroundImage = global::PhamMemQuanLyKho1._1.Properties.Resources.awesome_collection_of_simple_background_on_hd_wallpapers_elegant_formal_powerpoint_background_designs_640x480;
-            this.ClientSize = new System.Drawing.Size(766, 430);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(837, 430);
             this.Controls.Add(this.dtgv_nhacungcap);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NhaCungCap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "NhaCungCap";
+            this.Text = "Nhà cung cấp - phần mền quản lý kho sách";
             this.Load += new System.EventHandler(this.NhaCungCap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_nhacungcap)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -430,9 +487,14 @@
         private System.Windows.Forms.Button btn_exitncc;
         private System.Windows.Forms.Button btn_deletencc;
         private System.Windows.Forms.Button btn_clearncc;
-        private System.Windows.Forms.Button btn_fixncc;
+        private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Button btn_addncc;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_luu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mancc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenncc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diachincc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sotk;
     }
 }
