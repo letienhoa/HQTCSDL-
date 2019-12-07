@@ -13,6 +13,7 @@ namespace PhamMemQuanLyKho1._1
 {
     public partial class Ke : Form
     {
+        int a = 0;
         public Ke()
         {
             InitializeComponent();
@@ -22,28 +23,24 @@ namespace PhamMemQuanLyKho1._1
             string thongtin = @"exec dbo.thongtinke";
             DataTable dt = connect.getDataTable(thongtin);
             dtgv_ke.DataSource = dt;
+
+            txb_make.Enabled = false;
+            txb_tenke.Enabled = false;
         }
         private void btn_clearn_Click(object sender, EventArgs e)
         {
             this.txb_make.Clear();
             this.txb_tenke.Clear();
+            loaddulieu();
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            string kiemtrake = @"exec dbo.kiemtrake N'" + txb_make.Text + "'";
-            DataTable dt = connect.getDataTable(kiemtrake);
-            if (dt.Rows.Count == 0)
-            {
-                string themvao = @"exec dbo.themke N'" + txb_make.Text + "',N'" + txb_tenke.Text +"'";
-                connect.executeQuery(themvao);
-                DialogResult dialog = MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loaddulieu();
-            }
-            else
-            {
-                DialogResult dialog = MessageBox.Show("Mã kệ đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            a = 1;
+            txb_make.Enabled = true;
+            txb_tenke.Enabled = true;
+
+            
         }
 
         private void Ke_Load(object sender, EventArgs e)
@@ -53,21 +50,42 @@ namespace PhamMemQuanLyKho1._1
 
         private void btn_fix_Click(object sender, EventArgs e)
         {
-            string sua = @"exec dbo.suake N'" + txb_make.Text + "',N'" + txb_tenke.Text+ "'";
-            DialogResult dialog = MessageBox.Show("Bạn có chắc là muốn sửa thông tin", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialog == DialogResult.Yes)
+            if(a == 1)
             {
-                try
+                string kiemtrake = @"exec dbo.kiemtrake N'" + txb_make.Text + "'";
+                DataTable dt = connect.getDataTable(kiemtrake);
+                if (dt.Rows.Count == 0)
                 {
-                    connect.executeQuery(sua);
-                    MessageBox.Show("Sửa thành công");
+                    string themvao = @"exec dbo.themke N'" + txb_make.Text + "',N'" + txb_tenke.Text + "'";
+                    connect.executeQuery(themvao);
+                    DialogResult dialog = MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loaddulieu();
                 }
-                catch
+                else
                 {
-                    MessageBox.Show("Lỗi thực thi !!!");
+                    DialogResult dialog = MessageBox.Show("Mã kệ đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            else if (a == 2)
+            {
+                string sua = @"exec dbo.suake N'" + txb_make.Text + "',N'" + txb_tenke.Text + "'";
+                DialogResult dialog = MessageBox.Show("Bạn có chắc là muốn sửa thông tin", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialog == DialogResult.Yes)
+                {
+                    try
+                    {
+                        connect.executeQuery(sua);
+                        MessageBox.Show("Sửa thành công");
+                        loaddulieu();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Lỗi thực thi !!!");
+                    }
+                }
+            }
+            a = 0;
+            
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
@@ -112,6 +130,13 @@ namespace PhamMemQuanLyKho1._1
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            a = 2;
+            txb_make.Enabled = false;
+            txb_tenke.Enabled = true;
         }
     }
 }

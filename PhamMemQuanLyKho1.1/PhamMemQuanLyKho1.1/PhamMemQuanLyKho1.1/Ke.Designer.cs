@@ -34,7 +34,7 @@
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_clearn = new System.Windows.Forms.Button();
-            this.btn_fix = new System.Windows.Forms.Button();
+            this.btn_sua = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -48,6 +48,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txb_searchid = new System.Windows.Forms.TextBox();
             this.dtgv_ke = new System.Windows.Forms.DataGridView();
+            this.btn_luu = new System.Windows.Forms.Button();
+            this.make = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenke = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -64,24 +67,25 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(27, 19);
+            this.panel1.Location = new System.Drawing.Point(11, 19);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(310, 412);
+            this.panel1.Size = new System.Drawing.Size(335, 412);
             this.panel1.TabIndex = 4;
             // 
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.btn_luu);
             this.panel6.Controls.Add(this.btn_exit);
             this.panel6.Controls.Add(this.btn_delete);
             this.panel6.Controls.Add(this.btn_clearn);
-            this.panel6.Controls.Add(this.btn_fix);
+            this.panel6.Controls.Add(this.btn_sua);
             this.panel6.Controls.Add(this.btn_add);
             this.panel6.Location = new System.Drawing.Point(196, 83);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(106, 316);
+            this.panel6.Size = new System.Drawing.Size(133, 316);
             this.panel6.TabIndex = 5;
             // 
             // btn_exit
@@ -89,12 +93,12 @@
             this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_exit.BackgroundImage")));
             this.btn_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_exit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_exit.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.ForeColor = System.Drawing.Color.Red;
             this.btn_exit.Location = new System.Drawing.Point(12, 270);
             this.btn_exit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(84, 39);
+            this.btn_exit.Size = new System.Drawing.Size(104, 39);
             this.btn_exit.TabIndex = 7;
             this.btn_exit.Text = "Thoát";
             this.btn_exit.UseVisualStyleBackColor = false;
@@ -105,12 +109,12 @@
             this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_delete.BackgroundImage")));
             this.btn_delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_delete.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btn_delete.Location = new System.Drawing.Point(12, 206);
+            this.btn_delete.Location = new System.Drawing.Point(12, 227);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(84, 39);
+            this.btn_delete.Size = new System.Drawing.Size(104, 39);
             this.btn_delete.TabIndex = 6;
             this.btn_delete.Text = "Xóa";
             this.btn_delete.UseVisualStyleBackColor = false;
@@ -121,44 +125,44 @@
             this.btn_clearn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_clearn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_clearn.BackgroundImage")));
             this.btn_clearn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_clearn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clearn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clearn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btn_clearn.Location = new System.Drawing.Point(12, 11);
+            this.btn_clearn.Location = new System.Drawing.Point(12, 120);
             this.btn_clearn.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clearn.Name = "btn_clearn";
-            this.btn_clearn.Size = new System.Drawing.Size(84, 39);
+            this.btn_clearn.Size = new System.Drawing.Size(104, 39);
             this.btn_clearn.TabIndex = 3;
             this.btn_clearn.Text = "Làm mới";
             this.btn_clearn.UseVisualStyleBackColor = false;
             this.btn_clearn.Click += new System.EventHandler(this.btn_clearn_Click);
             // 
-            // btn_fix
+            // btn_sua
             // 
-            this.btn_fix.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btn_fix.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_fix.BackgroundImage")));
-            this.btn_fix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_fix.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_fix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btn_fix.Location = new System.Drawing.Point(12, 140);
-            this.btn_fix.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_fix.Name = "btn_fix";
-            this.btn_fix.Size = new System.Drawing.Size(84, 39);
-            this.btn_fix.TabIndex = 5;
-            this.btn_fix.Text = "Sửa ";
-            this.btn_fix.UseVisualStyleBackColor = false;
-            this.btn_fix.Click += new System.EventHandler(this.btn_fix_Click);
+            this.btn_sua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btn_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_sua.BackgroundImage")));
+            this.btn_sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_sua.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_sua.Location = new System.Drawing.Point(12, 47);
+            this.btn_sua.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_sua.Name = "btn_sua";
+            this.btn_sua.Size = new System.Drawing.Size(104, 39);
+            this.btn_sua.TabIndex = 5;
+            this.btn_sua.Text = "Sửa ";
+            this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_add
             // 
             this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add.BackgroundImage")));
             this.btn_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_add.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btn_add.Location = new System.Drawing.Point(12, 75);
+            this.btn_add.Location = new System.Drawing.Point(12, 4);
             this.btn_add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(84, 39);
+            this.btn_add.Size = new System.Drawing.Size(104, 39);
             this.btn_add.TabIndex = 4;
             this.btn_add.Text = "Thêm";
             this.btn_add.UseVisualStyleBackColor = false;
@@ -169,7 +173,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label5.Location = new System.Drawing.Point(110, 21);
+            this.label5.Location = new System.Drawing.Point(116, 27);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 29);
@@ -190,7 +194,7 @@
             // txb_tenke
             // 
             this.txb_tenke.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_tenke.Location = new System.Drawing.Point(4, 37);
+            this.txb_tenke.Location = new System.Drawing.Point(6, 34);
             this.txb_tenke.Margin = new System.Windows.Forms.Padding(2);
             this.txb_tenke.Name = "txb_tenke";
             this.txb_tenke.Size = new System.Drawing.Size(166, 26);
@@ -234,7 +238,7 @@
             // txb_make
             // 
             this.txb_make.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_make.Location = new System.Drawing.Point(4, 37);
+            this.txb_make.Location = new System.Drawing.Point(6, 34);
             this.txb_make.Margin = new System.Windows.Forms.Padding(2);
             this.txb_make.Name = "txb_make";
             this.txb_make.Size = new System.Drawing.Size(166, 26);
@@ -290,7 +294,11 @@
             // 
             // dtgv_ke
             // 
+            this.dtgv_ke.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dtgv_ke.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_ke.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.make,
+            this.tenke});
             this.dtgv_ke.Location = new System.Drawing.Point(350, 62);
             this.dtgv_ke.Margin = new System.Windows.Forms.Padding(2);
             this.dtgv_ke.Name = "dtgv_ke";
@@ -300,11 +308,39 @@
             this.dtgv_ke.TabIndex = 5;
             this.dtgv_ke.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_ke_CellClick);
             // 
+            // btn_luu
+            // 
+            this.btn_luu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btn_luu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_luu.BackgroundImage")));
+            this.btn_luu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_luu.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_luu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_luu.Location = new System.Drawing.Point(12, 163);
+            this.btn_luu.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_luu.Name = "btn_luu";
+            this.btn_luu.Size = new System.Drawing.Size(104, 39);
+            this.btn_luu.TabIndex = 8;
+            this.btn_luu.Text = "Lưu";
+            this.btn_luu.UseVisualStyleBackColor = false;
+            this.btn_luu.Click += new System.EventHandler(this.btn_fix_Click);
+            // 
+            // make
+            // 
+            this.make.DataPropertyName = "make";
+            this.make.HeaderText = "Mã Kệ";
+            this.make.Name = "make";
+            // 
+            // tenke
+            // 
+            this.tenke.DataPropertyName = "tenke";
+            this.tenke.HeaderText = "Tên Kệ";
+            this.tenke.Name = "tenke";
+            // 
             // Ke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PhamMemQuanLyKho1._1.Properties.Resources.awesome_collection_of_simple_background_on_hd_wallpapers_elegant_formal_powerpoint_background_designs_640x480;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(702, 450);
             this.Controls.Add(this.panel1);
@@ -335,7 +371,7 @@
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_clearn;
-        private System.Windows.Forms.Button btn_fix;
+        private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
@@ -349,5 +385,8 @@
         private System.Windows.Forms.TextBox txb_searchid;
         private System.Windows.Forms.DataGridView dtgv_ke;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_luu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn make;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenke;
     }
 }

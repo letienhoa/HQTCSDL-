@@ -12,6 +12,7 @@ namespace PhamMemQuanLyKho1._1
 {
     public partial class KhachHang : Form
     {
+        int a = 0;
         public KhachHang()
         {
             InitializeComponent();
@@ -23,6 +24,11 @@ namespace PhamMemQuanLyKho1._1
             string thongtin = @"exec dbo.thongtinkhachhang";
             DataTable dt = connect.getDataTable(thongtin);
             dtgv_khachhang.DataSource = dt;
+
+            txb_ma.Enabled = false;
+            txb_ten.Enabled = false;
+            txb_sex.Enabled = false;
+            txb_diachi.Enabled = false;
         }
         private void btn_clearn_Click(object sender, EventArgs e)
         {
@@ -30,6 +36,7 @@ namespace PhamMemQuanLyKho1._1
             this.txb_ten.Clear();
             this.txb_diachi.Clear();
             this.txb_sex.Clear();
+            loaddulieu();
         }
         private void dtgv_khachhang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -42,40 +49,54 @@ namespace PhamMemQuanLyKho1._1
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            string kiemtra = @"exec dbo.kiemtrakhachhang N'" + txb_ma.Text + "'";
-            DataTable dt = connect.getDataTable(kiemtra);
-            if (dt.Rows.Count == 0)
-            {
-                string themvao = @"exec dbo.themkhachhang N'" + txb_ma.Text + "',N'" + txb_ten.Text
-                    + "',N'" + txb_sex.Text + "',N'" + txb_diachi.Text + "'";
-                connect.executeQuery(themvao);
-                DialogResult dialog = MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loaddulieu();
-            }
-            else
-            {
-                DialogResult dialog = MessageBox.Show("Mã khách hàng đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            a = 1;
+            txb_ma.Enabled = true;
+            txb_ten.Enabled = true;
+            txb_sex.Enabled = true;
+            txb_diachi.Enabled = true;
+            
         }
 
         private void btn_fix_Click(object sender, EventArgs e)
         {
-            string sua = @"exec dbo.suakhachhang N'" + txb_ma.Text + "',N'" + txb_ten.Text
-                   + "',N'" + txb_sex.Text + "',N'" + txb_diachi.Text + "'";
-            DialogResult dialog = MessageBox.Show("Bạn có chắc là muốn sửa thông tin", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialog == DialogResult.Yes)
+            if(a == 1)
             {
-                try
+                string kiemtra = @"exec dbo.kiemtrakhachhang N'" + txb_ma.Text + "'";
+                DataTable dt = connect.getDataTable(kiemtra);
+                if (dt.Rows.Count == 0)
                 {
-                    connect.executeQuery(sua);
-                    MessageBox.Show("Sửa thành công");
+                    string themvao = @"exec dbo.themkhachhang N'" + txb_ma.Text + "',N'" + txb_ten.Text
+                        + "',N'" + txb_sex.Text + "',N'" + txb_diachi.Text + "'";
+                    connect.executeQuery(themvao);
+                    DialogResult dialog = MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loaddulieu();
                 }
-                catch
+                else
                 {
-                    MessageBox.Show("Lỗi thực thi !!!");
+                    DialogResult dialog = MessageBox.Show("Mã khách hàng đã tồn tại, vui long thêm lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            else if(a ==2)
+            {
+                string sua = @"exec dbo.suakhachhang N'" + txb_ma.Text + "',N'" + txb_ten.Text
+                   + "',N'" + txb_sex.Text + "',N'" + txb_diachi.Text + "'";
+                DialogResult dialog = MessageBox.Show("Bạn có chắc là muốn sửa thông tin", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialog == DialogResult.Yes)
+                {
+                    try
+                    {
+                        connect.executeQuery(sua);
+                        MessageBox.Show("Sửa thành công");
+                        loaddulieu();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Lỗi thực thi !!!");
+                    }
+                }
+            }
+            a = 0;
+            
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
@@ -113,6 +134,15 @@ namespace PhamMemQuanLyKho1._1
             string kiemtra = @"exec dbo.searchkhachhang N'" + s + "'";
             DataTable dt = connect.getDataTable(kiemtra);
             dtgv_khachhang.DataSource = dt;
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            a = 2;
+            txb_ma.Enabled = false;
+            txb_ten.Enabled = true;
+            txb_sex.Enabled = true;
+            txb_diachi.Enabled = true;
         }
     }
 }

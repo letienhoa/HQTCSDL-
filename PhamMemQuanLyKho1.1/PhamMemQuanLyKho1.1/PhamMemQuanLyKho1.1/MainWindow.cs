@@ -18,12 +18,14 @@ namespace PhamMemQuanLyKho1._1
             loadDATA();
         }
         public static bool ilogin = false;
+        public static bool checkuser = false;
         void loadDATA()
         {
 
-            if (ilogin == true)
+            if (ilogin == true && checkuser ==true)
             {
                 btnLogin.Enabled = false;
+                btnLogout.Enabled = true;
                 btnSach.Enabled = true;
                 btnLoaiSach.Enabled = true;
                 btnKeSach.Enabled = true;
@@ -34,9 +36,24 @@ namespace PhamMemQuanLyKho1._1
                 btnPN.Enabled = true;
                 btnPX.Enabled = true;
             }
+            else if (ilogin == true && checkuser == false)
+            {
+                btnLogin.Enabled = false;
+                btnLogout.Enabled = true;
+                btnSach.Enabled = false;
+                btnLoaiSach.Enabled = false;
+                btnKeSach.Enabled = false;
+                btnNCC.Enabled = false;
+                btnNV.Enabled = false;
+                btnKH.Enabled = false;
+                btnBPNV.Enabled = false;
+                btnPN.Enabled = false;
+                btnPX.Enabled = true;
+            }
             else
             {
                 btnLogin.Enabled = true;
+                btnLogout.Enabled = false;
                 btnSach.Enabled = false;
                 btnLoaiSach.Enabled = false;
                 btnKeSach.Enabled = false;
@@ -48,6 +65,20 @@ namespace PhamMemQuanLyKho1._1
                 btnPX.Enabled = false;
             }
 
+        }
+        void loadDATAlogout()
+        {
+            btnLogin.Enabled = true;
+            btnLogout.Enabled = false;
+            btnSach.Enabled = false;
+            btnLoaiSach.Enabled = false;
+            btnKeSach.Enabled = false;
+            btnNCC.Enabled = false;
+            btnNV.Enabled = false;
+            btnKH.Enabled = false;
+            btnBPNV.Enabled = false;
+            btnPN.Enabled = false;
+            btnPX.Enabled = false;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -118,6 +149,23 @@ namespace PhamMemQuanLyKho1._1
         {
             Form sach = new Sach();
             sach.ShowDialog();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            loadDATAlogout();
+            DialogResult dialog = MessageBox.Show("Bạn đã thoát đăng nhập, OK để đăng nhập lại hoặc CANCEL ?", "Thoát đăng nhập", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialog == DialogResult.OK)
+            {
+                MyLogin lg = new MyLogin();
+                lg.ShowDialog();
+                loadDATA();
+            }
+            else if(dialog == DialogResult.Cancel)
+            {
+                this.Close();
+            }
+
         }
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.btnSach = new System.Windows.Forms.Button();
+            this.imagebtn = new System.Windows.Forms.ImageList(this.components);
             this.btnKeSach = new System.Windows.Forms.Button();
             this.btnLoaiSach = new System.Windows.Forms.Button();
             this.btnNCC = new System.Windows.Forms.Button();
@@ -47,9 +48,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnexit = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.imagebtn = new System.Windows.Forms.ImageList(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,6 +79,30 @@
             this.btnSach.UseVisualStyleBackColor = false;
             this.btnSach.Click += new System.EventHandler(this.btnSach_Click);
             // 
+            // imagebtn
+            // 
+            this.imagebtn.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imagebtn.ImageStream")));
+            this.imagebtn.TransparentColor = System.Drawing.Color.Transparent;
+            this.imagebtn.Images.SetKeyName(0, "bangphong.ico");
+            this.imagebtn.Images.SetKeyName(1, "dangky.ico");
+            this.imagebtn.Images.SetKeyName(2, "DichVu.ico");
+            this.imagebtn.Images.SetKeyName(3, "exit.ico");
+            this.imagebtn.Images.SetKeyName(4, "giaphong.ico");
+            this.imagebtn.Images.SetKeyName(5, "hoadon.ico");
+            this.imagebtn.Images.SetKeyName(6, "Khach.ico");
+            this.imagebtn.Images.SetKeyName(7, "login.ico");
+            this.imagebtn.Images.SetKeyName(8, "dangky.ico");
+            this.imagebtn.Images.SetKeyName(9, "ke-sach.png");
+            this.imagebtn.Images.SetKeyName(10, "Khach.ico");
+            this.imagebtn.Images.SetKeyName(11, "khach.png");
+            this.imagebtn.Images.SetKeyName(12, "loaisach.png");
+            this.imagebtn.Images.SetKeyName(13, "nhacc.png");
+            this.imagebtn.Images.SetKeyName(14, "pn.png");
+            this.imagebtn.Images.SetKeyName(15, "px.png");
+            this.imagebtn.Images.SetKeyName(16, "User.png");
+            this.imagebtn.Images.SetKeyName(17, "bpnv.png");
+            this.imagebtn.Images.SetKeyName(18, "logout.ico");
+            // 
             // btnKeSach
             // 
             this.btnKeSach.BackColor = System.Drawing.Color.Transparent;
@@ -85,6 +110,9 @@
             this.btnKeSach.FlatAppearance.BorderSize = 0;
             this.btnKeSach.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKeSach.ForeColor = System.Drawing.Color.Navy;
+            this.btnKeSach.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnKeSach.ImageIndex = 9;
+            this.btnKeSach.ImageList = this.imagebtn;
             this.btnKeSach.Location = new System.Drawing.Point(111, 3);
             this.btnKeSach.Name = "btnKeSach";
             this.btnKeSach.Size = new System.Drawing.Size(100, 60);
@@ -101,6 +129,9 @@
             this.btnLoaiSach.FlatAppearance.BorderSize = 0;
             this.btnLoaiSach.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoaiSach.ForeColor = System.Drawing.Color.Navy;
+            this.btnLoaiSach.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLoaiSach.ImageIndex = 0;
+            this.btnLoaiSach.ImageList = this.imagebtn;
             this.btnLoaiSach.Location = new System.Drawing.Point(217, 3);
             this.btnLoaiSach.Name = "btnLoaiSach";
             this.btnLoaiSach.Size = new System.Drawing.Size(100, 60);
@@ -117,6 +148,8 @@
             this.btnNCC.FlatAppearance.BorderSize = 0;
             this.btnNCC.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNCC.ForeColor = System.Drawing.Color.Navy;
+            this.btnNCC.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNCC.ImageIndex = 13;
             this.btnNCC.ImageList = this.imagebtn;
             this.btnNCC.Location = new System.Drawing.Point(323, 3);
             this.btnNCC.Name = "btnNCC";
@@ -134,6 +167,9 @@
             this.btnKH.FlatAppearance.BorderSize = 0;
             this.btnKH.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKH.ForeColor = System.Drawing.Color.Navy;
+            this.btnKH.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnKH.ImageIndex = 11;
+            this.btnKH.ImageList = this.imagebtn;
             this.btnKH.Location = new System.Drawing.Point(111, 3);
             this.btnKH.Name = "btnKH";
             this.btnKH.Size = new System.Drawing.Size(100, 60);
@@ -150,6 +186,9 @@
             this.btnBPNV.FlatAppearance.BorderSize = 0;
             this.btnBPNV.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBPNV.ForeColor = System.Drawing.Color.Navy;
+            this.btnBPNV.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnBPNV.ImageIndex = 17;
+            this.btnBPNV.ImageList = this.imagebtn;
             this.btnBPNV.Location = new System.Drawing.Point(217, 3);
             this.btnBPNV.Name = "btnBPNV";
             this.btnBPNV.Size = new System.Drawing.Size(100, 60);
@@ -185,6 +224,9 @@
             this.btnPX.FlatAppearance.BorderSize = 0;
             this.btnPX.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPX.ForeColor = System.Drawing.Color.Navy;
+            this.btnPX.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPX.ImageIndex = 15;
+            this.btnPX.ImageList = this.imagebtn;
             this.btnPX.Location = new System.Drawing.Point(686, 3);
             this.btnPX.Name = "btnPX";
             this.btnPX.Size = new System.Drawing.Size(110, 60);
@@ -201,6 +243,9 @@
             this.btnPN.FlatAppearance.BorderSize = 0;
             this.btnPN.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPN.ForeColor = System.Drawing.Color.Navy;
+            this.btnPN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPN.ImageIndex = 14;
+            this.btnPN.ImageList = this.imagebtn;
             this.btnPN.Location = new System.Drawing.Point(570, 3);
             this.btnPN.Name = "btnPN";
             this.btnPN.Size = new System.Drawing.Size(110, 60);
@@ -216,7 +261,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(272, 112);
+            this.label1.Location = new System.Drawing.Point(249, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(290, 45);
             this.label1.TabIndex = 9;
@@ -230,7 +275,7 @@
             this.panel1.Controls.Add(this.btnNV);
             this.panel1.Location = new System.Drawing.Point(0, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(692, 68);
+            this.panel1.Size = new System.Drawing.Size(571, 68);
             this.panel1.TabIndex = 12;
             // 
             // menuStrip1
@@ -259,11 +304,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.btnexit);
             this.panel2.Controls.Add(this.btnLogin);
-            this.panel2.Location = new System.Drawing.Point(698, 27);
+            this.panel2.Location = new System.Drawing.Point(577, 27);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(102, 69);
+            this.panel2.Size = new System.Drawing.Size(223, 69);
             this.panel2.TabIndex = 14;
             // 
             // btnexit
@@ -273,7 +319,7 @@
             this.btnexit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnexit.ImageIndex = 3;
             this.btnexit.ImageList = this.imagebtn;
-            this.btnexit.Location = new System.Drawing.Point(52, 2);
+            this.btnexit.Location = new System.Drawing.Point(173, 4);
             this.btnexit.Margin = new System.Windows.Forms.Padding(2);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(46, 64);
@@ -301,19 +347,6 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // imagebtn
-            // 
-            this.imagebtn.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imagebtn.ImageStream")));
-            this.imagebtn.TransparentColor = System.Drawing.Color.Transparent;
-            this.imagebtn.Images.SetKeyName(0, "bangphong.ico");
-            this.imagebtn.Images.SetKeyName(1, "dangky.ico");
-            this.imagebtn.Images.SetKeyName(2, "DichVu.ico");
-            this.imagebtn.Images.SetKeyName(3, "exit.ico");
-            this.imagebtn.Images.SetKeyName(4, "giaphong.ico");
-            this.imagebtn.Images.SetKeyName(5, "hoadon.ico");
-            this.imagebtn.Images.SetKeyName(6, "Khach.ico");
-            this.imagebtn.Images.SetKeyName(7, "login.ico");
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
@@ -336,6 +369,24 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(800, 274);
             this.panel4.TabIndex = 15;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLogout.ImageIndex = 18;
+            this.btnLogout.ImageList = this.imagebtn;
+            this.btnLogout.Location = new System.Drawing.Point(52, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(51, 64);
+            this.btnLogout.TabIndex = 16;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // MainWindow
             // 
@@ -388,5 +439,6 @@
         private System.Windows.Forms.ImageList imagebtn;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

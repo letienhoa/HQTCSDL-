@@ -52,10 +52,12 @@ namespace PhamMemQuanLyKho1._1
                 if(b =="1")
                 {
                     MainWindow.ilogin = true;
+                    MainWindow.checkuser = true;
                 }
                 else if (b =="0")
                 {
-                    MainWindow.ilogin = false;
+                    MainWindow.ilogin = true;
+                    MainWindow.checkuser = false;
                 }
                 
                 this.Close();
