@@ -1,0 +1,128 @@
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.exe.config
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.exe
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.pdb
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csprojAssemblyReference.cache
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Form1.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.MyLogin.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Properties.Resources.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.GenerateResource.cache
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.exe
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.pdb
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\System.Data.SqlClient.dll
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\System.Data.SqlClient.xml
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.KhoHang_form.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.MainWindow.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.CopyComplete
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.exe.config
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.exe
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.pdb
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csprojAssemblyReference.cache
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.MainWindow.resources
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.MyLogin.resources
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Properties.Resources.resources
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.GenerateResource.cache
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.CopyComplete
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.exe
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.pdb
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Ke.resources
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.NhaCungCap.resources
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.KhachHang.resources
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.BoPhanNhanVien.resources
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.LoaiSach.resources
+C:\Users\Hoa-Dev-2811\Downloads\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Sach.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.exe.config
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.exe
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.pdb
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\System.Data.SqlClient.dll
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\System.Data.SqlClient.xml
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csprojAssemblyReference.cache
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.BoPhanNhanVien.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Ke.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.KhachHang.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.LoaiSach.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.MainWindow.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.MyLogin.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.NhaCungCap.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Properties.Resources.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Sach.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.GenerateResource.cache
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.CopyComplete
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.exe
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.pdb
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.exe.config
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.exe
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.pdb
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\System.Data.SqlClient.dll
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\System.Data.SqlClient.xml
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csprojAssemblyReference.cache
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.BoPhanNhanVien.resources
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Ke.resources
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.KhachHang.resources
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.LoaiSach.resources
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.MainWindow.resources
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.MyLogin.resources
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.NhaCungCap.resources
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.PhieuNhap.resources
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.PhieuXuat.resources
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Properties.Resources.resources
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Sach.resources
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.GenerateResource.cache
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.CopyComplete
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.exe
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.pdb
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.NhanVien.resources
+D:\sql\HQTCSDL--master\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Acount.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Acount.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.NhanVien.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.PhieuNhap.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.PhieuXuat.resources
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.exe.config
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.exe
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.pdb
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\System.Data.SqlClient.dll
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\System.Data.SqlClient.xml
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csprojAssemblyReference.cache
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Acount.resources
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.BoPhanNhanVien.resources
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Ke.resources
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.KhachHang.resources
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.LoaiSach.resources
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.MainWindow.resources
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.MyLogin.resources
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.NhaCungCap.resources
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.NhanVien.resources
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.PhieuNhap.resources
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.PhieuXuat.resources
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Properties.Resources.resources
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Sach.resources
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.GenerateResource.cache
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.CopyComplete
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.exe
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.pdb
+D:\sql\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Acount2.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.exe.config
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.exe
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\PhamMemQuanLyKho1.1.pdb
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\System.Data.SqlClient.dll
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\bin\Debug\System.Data.SqlClient.xml
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csprojAssemblyReference.cache
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Acount.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Acount2.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.BoPhanNhanVien.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Ke.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.KhachHang.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.LoaiSach.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.MainWindow.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.MyLogin.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.NhaCungCap.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.NhanVien.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.PhieuNhap.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.PhieuXuat.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Properties.Resources.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1._1.Sach.resources
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.GenerateResource.cache
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.csproj.CopyComplete
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.exe
+D:\Quoc_Dat_CNTT\5.HK1_Nam3\He_QTCSDL\Do_An\HQTCSDL-\PhamMemQuanLyKho1.1 new\PhamMemQuanLyKho1.1\PhamMemQuanLyKho1.1\obj\Debug\PhamMemQuanLyKho1.1.pdb
