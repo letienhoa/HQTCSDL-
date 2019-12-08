@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyKho" Class="DataClassDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ALVIND-MARTIN-P\SQLEXPRESS;Initial Catalog=QuanLyKho;Integrated Security=True" SettingsObjectName="PhamMemQuanLyKho1._1.Properties.Settings" SettingsPropertyName="QuanLyKhoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.account" Member="accounts">
+    <Type Name="account">
+      <Column Name="idtk" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="taikhoan" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="matkhau" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.bophannv" Member="bophannvs">
+    <Type Name="bophannv">
+      <Column Name="mabophan" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenbophan" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="bophannv_thukho" Member="thukhos" ThisKey="mabophan" OtherKey="mabophan" Type="thukho" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hanghoa" Member="hanghoas">
+    <Type Name="hanghoa">
+      <Column Name="tenhang" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="mahang" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tennhomhang" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="makho" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Association Name="hanghoa_phieunhap" Member="phieunhaps" ThisKey="mahang" OtherKey="mahang" Type="phieunhap" />
+      <Association Name="hanghoa_phieuxuat" Member="phieuxuats" ThisKey="mahang" OtherKey="mahang" Type="phieuxuat" />
+      <Association Name="kho_hanghoa" Member="kho" ThisKey="makho" OtherKey="makho" Type="kho" IsForeignKey="true" />
+      <Association Name="nhomhanghoa_hanghoa" Member="nhomhanghoa" ThisKey="tennhomhang" OtherKey="tennhomhang" Type="nhomhanghoa" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.khachhang" Member="khachhangs">
+    <Type Name="khachhang">
+      <Column Name="makhachhang" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenkhachhang" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="sex" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="khachhang_phieuxuat" Member="phieuxuats" ThisKey="makhachhang" OtherKey="makhachhang" Type="phieuxuat" />
+    </Type>
+  </Table>
+  <Table Name="dbo.kho" Member="khos">
+    <Type Name="kho">
+      <Column Name="makho" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenkho" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="kho_hanghoa" Member="hanghoas" ThisKey="makho" OtherKey="makho" Type="hanghoa" />
+    </Type>
+  </Table>
+  <Table Name="dbo.nhacungcap" Member="nhacungcaps">
+    <Type Name="nhacungcap">
+      <Column Name="mancc" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenncc" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="diachincc" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="sotk" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Association Name="nhacungcap_phieunhap" Member="phieunhaps" ThisKey="mancc" OtherKey="mancc" Type="phieunhap" />
+    </Type>
+  </Table>
+  <Table Name="dbo.nhomhanghoa" Member="nhomhanghoas">
+    <Type Name="nhomhanghoa">
+      <Column Name="tennhomhang" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="nhomhanghoa_hanghoa" Member="hanghoas" ThisKey="tennhomhang" OtherKey="tennhomhang" Type="hanghoa" />
+    </Type>
+  </Table>
+  <Table Name="dbo.phieunhap" Member="phieunhaps">
+    <Type Name="phieunhap">
+      <Column Name="maphieunhap" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ngaynhap" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="mathukho" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="mancc" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mahang" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Association Name="hanghoa_phieunhap" Member="hanghoa" ThisKey="mahang" OtherKey="mahang" Type="hanghoa" IsForeignKey="true" />
+      <Association Name="nhacungcap_phieunhap" Member="nhacungcap" ThisKey="mancc" OtherKey="mancc" Type="nhacungcap" IsForeignKey="true" />
+      <Association Name="thukho_phieunhap" Member="thukho" ThisKey="mathukho" OtherKey="mathukho" Type="thukho" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.phieuxuat" Member="phieuxuats">
+    <Type Name="phieuxuat">
+      <Column Name="maphieuxuat" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ngayxuat" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="mathukho" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="mahang" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="makhachhang" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Association Name="hanghoa_phieuxuat" Member="hanghoa" ThisKey="mahang" OtherKey="mahang" Type="hanghoa" IsForeignKey="true" />
+      <Association Name="khachhang_phieuxuat" Member="khachhang" ThisKey="makhachhang" OtherKey="makhachhang" Type="khachhang" IsForeignKey="true" />
+      <Association Name="thukho_phieuxuat" Member="thukho" ThisKey="mathukho" OtherKey="mathukho" Type="thukho" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.thukho" Member="thukhos">
+    <Type Name="thukho">
+      <Column Name="mathukho" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenthukho" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="diachi" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="mabophan" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Association Name="thukho_phieunhap" Member="phieunhaps" ThisKey="mathukho" OtherKey="mathukho" Type="phieunhap" />
+      <Association Name="thukho_phieuxuat" Member="phieuxuats" ThisKey="mathukho" OtherKey="mathukho" Type="phieuxuat" />
+      <Association Name="bophannv_thukho" Member="bophannv" ThisKey="mabophan" OtherKey="mabophan" Type="bophannv" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
