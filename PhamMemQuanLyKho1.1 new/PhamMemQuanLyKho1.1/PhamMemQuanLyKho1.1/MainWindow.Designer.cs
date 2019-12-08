@@ -103,6 +103,7 @@
             this.imagebtn.Images.SetKeyName(16, "User.png");
             this.imagebtn.Images.SetKeyName(17, "bpnv.png");
             this.imagebtn.Images.SetKeyName(18, "logout.ico");
+            this.imagebtn.Images.SetKeyName(19, "useraccount.png");
             // 
             // btnKeSach
             // 
@@ -284,11 +285,16 @@
             // 
             this.acountbtn.BackgroundImage = global::PhamMemQuanLyKho1._1.Properties.Resources.anh;
             this.acountbtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.acountbtn.ForeColor = System.Drawing.Color.Navy;
+            this.acountbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.acountbtn.ImageIndex = 19;
+            this.acountbtn.ImageList = this.imagebtn;
             this.acountbtn.Location = new System.Drawing.Point(323, 3);
             this.acountbtn.Name = "acountbtn";
             this.acountbtn.Size = new System.Drawing.Size(115, 57);
             this.acountbtn.TabIndex = 10;
             this.acountbtn.Text = "Acount";
+            this.acountbtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.acountbtn.UseVisualStyleBackColor = true;
             this.acountbtn.Click += new System.EventHandler(this.button1_Click);
             // 
