@@ -50,7 +50,7 @@ namespace PhamMemQuanLyKho1._1
                 btnBPNV.Enabled = false;
                 btnPN.Enabled = false;
                 btnPX.Enabled = true;
-                acountbtn.Enabled = true;
+                acountbtn.Enabled = false;
             }
             else
             {

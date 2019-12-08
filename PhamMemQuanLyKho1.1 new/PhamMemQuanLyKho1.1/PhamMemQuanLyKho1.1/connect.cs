@@ -20,7 +20,8 @@ namespace PhamMemQuanLyKho1._1
         static string source;
         public static void openConnection()
         {
-            source = @"Data Source=DESKTOP-BH96V59;Initial Catalog=QuanLyKho;Integrated Security=True";
+            source = @"Data Source=ALVIND-MARTIN-P\SQLEXPRESS;Initial Catalog=QuanLyKho;Integrated Security=True";
+            //source = @"Data Source=DESKTOP-BH96V59;Initial Catalog=QuanLyKho;Integrated Security=True";
             cnn = new SqlConnection(source);
             try
             {
